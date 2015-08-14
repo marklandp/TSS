@@ -1,0 +1,1744 @@
+[33mtag v0.0.1[m
+Tagger: root <root@localhost.localdomain>
+Date:   Thu Aug 13 09:26:43 2015 -0400
+
+First Version
+
+[33mcommit 838030524ee6a5766ae6368861d168235a04b5eb[m
+Author: root <root@localhost.localdomain>
+Date:   Thu Aug 13 09:22:25 2015 -0400
+
+    first commit
+
+[1mdiff --git a/.bowerrc b/.bowerrc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1669168[m
+[1m--- /dev/null[m
+[1m+++ b/.bowerrc[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m    "directory" : "vendor/bower"[m
+[32m+[m[32m}[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..346d3b2[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,30 @@[m
+[32m+[m[32m# yii console command[m
+[32m+[m[32m/yii[m
+[32m+[m
+[32m+[m[32m# phpstorm project files[m
+[32m+[m[32m.idea[m
+[32m+[m
+[32m+[m[32m# netbeans project files[m
+[32m+[m[32mnbproject[m
+[32m+[m
+[32m+[m[32m# zend studio for eclipse project files[m
+[32m+[m[32m.buildpath[m
+[32m+[m[32m.project[m
+[32m+[m[32m.settings[m
+[32m+[m
+[32m+[m[32m# windows thumbnail cache[m
+[32m+[m[32mThumbs.db[m
+[32m+[m
+[32m+[m[32m# composer vendor dir[m
+[32m+[m[32m/vendor[m
+[32m+[m
+[32m+[m[32m# composer itself is not needed[m
+[32m+[m[32mcomposer.phar[m
+[32m+[m
+[32m+[m[32m# Mac DS_Store Files[m
+[32m+[m[32m.DS_Store[m
+[32m+[m
+[32m+[m[32m# phpunit itself is not needed[m
+[32m+[m[32mphpunit.phar[m
+[32m+[m[32m# local phpunit config[m
+[32m+[m[32m/phpunit.xml[m
+[1mdiff --git a/LICENSE.md b/LICENSE.md[m
+[1mnew file mode 100755[m
+[1mindex 0000000..e98f03d[m
+[1m--- /dev/null[m
+[1m+++ b/LICENSE.md[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mThe Yii framework is free software. It is released under the terms of[m
+[32m+[m[32mthe following BSD License.[m
+[32m+[m
+[32m+[m[32mCopyright © 2008 by Yii Software LLC (http://www.yiisoft.com)[m
+[32m+[m[32mAll rights reserved.[m
+[32m+[m
+[32m+[m[32mRedistribution and use in source and binary forms, with or without[m
+[32m+[m[32mmodification, are permitted provided that the following conditions[m
+[32m+[m[32mare met:[m
+[32m+[m
+[32m+[m[32m * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m   notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m * Redistributions in binary form must reproduce the above copyright[m
+[32m+[m[32m   notice, this list of conditions and the following disclaimer in[m
+[32m+[m[32m   the documentation and/or other materials provided with the[m
+[32m+[m[32m   distribution.[m
+[32m+[m[32m * Neither the name of Yii Software LLC nor the names of its[m
+[32m+[m[32m   contributors may be used to endorse or promote products derived[m
+[32m+[m[32m   from this software without specific prior written permission.[m
+[32m+[m
+[32m+[m[32mTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32mLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS[m
+[32m+[m[32mFOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE[m
+[32m+[m[32mCOPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,[m
+[32m+[m[32mINCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,[m
+[32m+[m[32mBUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;[m
+[32m+[m[32mLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER[m
+[32m+[m[32mCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT[m
+[32m+[m[32mLIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN[m
+[32m+[m[32mANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE[m
+[32m+[m[32mPOSSIBILITY OF SUCH DAMAGE.[m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100755[m
+[1mindex 0000000..45e56ad[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,54 @@[m
+[32m+[m[32mYii 2 Advanced Project Template[m
+[32m+[m[32m===============================[m
+[32m+[m
+[32m+[m[32mYii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for[m
+[32m+[m[32mdeveloping complex Web applications with multiple tiers.[m
+[32m+[m
+[32m+[m[32mThe template includes three tiers: front end, back end, and console, each of which[m
+[32m+[m[32mis a separate Yii application.[m
+[32m+[m
+[32m+[m[32mThe template is designed to work in a team development environment. It supports[m
+[32m+[m[32mdeploying the application in different environments.[m
+[32m+[m
+[32m+[m[32mDocumentation is at [docs/guide/README.md](docs/guide/README.md).[m
+[32m+[m
+[32m+[m[32m[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)[m
+[32m+[m[32m[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)[m
+[32m+[m[32m[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)[m
+[32m+[m
+[32m+[m[32mDIRECTORY STRUCTURE[m
+[32m+[m[32m-------------------[m
+[32m+[m
+[32m+[m[32m```[m
+[32m+[m[32mcommon[m
+[32m+[m[32m    config/              contains shared configurations[m
+[32m+[m[32m    mail/                contains view files for e-mails[m
+[32m+[m[32m    models/              contains model classes used in both backend and frontend[m
+[32m+[m[32mconsole[m
+[32m+[m[32m    config/              contains console configurations[m
+[32m+[m[32m    controllers/         contains console controllers (commands)[m
+[32m+[m[32m    migrations/          contains database migrations[m
+[32m+[m[32m    models/              contains console-specific model classes[m
+[32m+[m[32m    runtime/             contains files generated during runtime[m
+[32m+[m[32mbackend[m
+[32m+[m[32m    assets/              contains application assets such as JavaScript and CSS[m
+[32m+[m[32m    config/              contains backend configurations[m
+[32m+[m[32m    controllers/         contains Web controller classes[m
+[32m+[m[32m    models/              contains backend-specific model classes[m
+[32m+[m[32m    runtime/             contains files generated during runtime[m
+[32m+[m[32m    views/               contains view files for the Web application[m
+[32m+[m[32m    web/                 contains the entry script and Web resources[m
+[32m+[m[32mfrontend[m
+[32m+[m[32m    assets/              contains application assets such as JavaScript and CSS[m
+[32m+[m[32m    config/              contains frontend configurations[m
+[32m+[m[32m    controllers/         contains Web controller classes[m
+[32m+[m[32m    models/              contains frontend-specific model classes[m
+[32m+[m[32m    runtime/             contains files generated during runtime[m
+[32m+[m[32m    views/               contains view files for the Web application[m
+[32m+[m[32m    web/                 contains the entry script and Web resources[m
+[32m+[m[32m    widgets/             contains frontend widgets[m
+[32m+[m[32mvendor/                  contains dependent 3rd-party packages[m
+[32m+[m[32menvironments/            contains environment-based overrides[m
+[32m+[m[32mtests                    contains various tests for the advanced application[m
+[32m+[m[32m    codeception/         contains tests developed with Codeception PHP Testing Framework[m
+[32m+[m[32m```[m
+[1mdiff --git a/backend/assets/AppAsset.php b/backend/assets/AppAsset.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..c262142[m
+[1m--- /dev/null[m
+[1m+++ b/backend/assets/AppAsset.php[m
+[36m@@ -0,0 +1,29 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32m/**[m
+[32m+[m[32m * @link http://www.yiiframework.com/[m
+[32m+[m[32m * @copyright Copyright (c) 2008 Yii Software LLC[m
+[32m+[m[32m * @license http://www.yiiframework.com/license/[m
+[32m+[m[32m */[m
+[32m+[m
+[32m+[m[32mnamespace backend\assets;[m
+[32m+[m
+[32m+[m[32muse yii\web\AssetBundle;[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * @author Qiang Xue <qiang.xue@gmail.com>[m
+[32m+[m[32m * @since 2.0[m
+[32m+[m[32m */[m
+[32m+[m[32mclass AppAsset extends AssetBundle[m
+[32m+[m[32m{[m
+[32m+[m[32m    public $basePath = '@webroot';[m
+[32m+[m[32m    public $baseUrl = '@web';[m
+[32m+[m[32m    public $css = [[m
+[32m+[m[32m        'css/site.css',[m
+[32m+[m[32m    ];[m
+[32m+[m[32m    public $js = [[m
+[32m+[m[32m    ];[m
+[32m+[m[32m    public $depends = [[m
+[32m+[m[32m        'yii\web\YiiAsset',[m
+[32m+[m[32m        'yii\bootstrap\BootstrapAsset',[m
+[32m+[m[32m    ];[m
+[32m+[m[32m}[m
+[1mdiff --git a/backend/config/.gitignore b/backend/config/.gitignore[m
+[1mnew file mode 100755[m
+[1mindex 0000000..20da318[m
+[1m--- /dev/null[m
+[1m+++ b/backend/config/.gitignore[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32mmain-local.php[m
+[32m+[m[32mparams-local.php[m
+\ No newline at end of file[m
+[1mdiff --git a/backend/config/bootstrap.php b/backend/config/bootstrap.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..b3d9bbc[m
+[1m--- /dev/null[m
+[1m+++ b/backend/config/bootstrap.php[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<?php[m
+[1mdiff --git a/backend/config/main.php b/backend/config/main.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..a0b5fc9[m
+[1m--- /dev/null[m
+[1m+++ b/backend/config/main.php[m
+[36m@@ -0,0 +1,34 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32m$params = array_merge([m
+[32m+[m[32m    require(__DIR__ . '/../../common/config/params.php'),[m
+[32m+[m[32m    require(__DIR__ . '/../../common/config/params-local.php'),[m
+[32m+[m[32m    require(__DIR__ . '/params.php'),[m
+[32m+[m[32m    require(__DIR__ . '/params-local.php')[m
+[32m+[m[32m);[m
+[32m+[m
+[32m+[m[32mreturn [[m
+[32m+[m[32m    'id' => 'app-backend',[m
+[32m+[m[32m    'basePath' => dirname(__DIR__),[m
+[32m+[m[32m    'controllerNamespace' => 'backend\controllers',[m
+[32m+[m[32m    'bootstrap' => ['log'],[m
+[32m+[m[32m    'modules' => [],[m
+[32m+[m[32m    'components' => [[m
+[32m+[m[32m        'user' => [[m
+[32m+[m[32m            'identityClass' => 'common\models\User',[m
+[32m+[m[32m            'enableAutoLogin' => true,[m
+[32m+[m[32m        ],[m
+[32m+[m[32m        'log' => [[m
+[32m+[m[32m            'traceLevel' => YII_DEBUG ? 3 : 0,[m
+[32m+[m[32m            'targets' => [[m
+[32m+[m[32m                [[m
+[32m+[m[32m                    'class' => 'yii\log\FileTarget',[m
+[32m+[m[32m                    'levels' => ['error', 'warning'],[m
+[32m+[m[32m                ],[m
+[32m+[m[32m            ],[m
+[32m+[m[32m        ],[m
+[32m+[m[32m        'errorHandler' => [[m
+[32m+[m[32m            'errorAction' => 'site/error',[m
+[32m+[m[32m        ],[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    'params' => $params,[m
+[32m+[m[32m];[m
+[1mdiff --git a/backend/config/params.php b/backend/config/params.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..7f754b9[m
+[1m--- /dev/null[m
+[1m+++ b/backend/config/params.php[m
+[36m@@ -0,0 +1,4 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32mreturn [[m
+[32m+[m[32m    'adminEmail' => 'admin@example.com',[m
+[32m+[m[32m];[m
+[1mdiff --git a/backend/controllers/SiteController.php b/backend/controllers/SiteController.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..db3259a[m
+[1m--- /dev/null[m
+[1m+++ b/backend/controllers/SiteController.php[m
+[36m@@ -0,0 +1,83 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32mnamespace backend\controllers;[m
+[32m+[m
+[32m+[m[32muse Yii;[m
+[32m+[m[32muse yii\filters\AccessControl;[m
+[32m+[m[32muse yii\web\Controller;[m
+[32m+[m[32muse common\models\LoginForm;[m
+[32m+[m[32muse yii\filters\VerbFilter;[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * Site controller[m
+[32m+[m[32m */[m
+[32m+[m[32mclass SiteController extends Controller[m
+[32m+[m[32m{[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function behaviors()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return [[m
+[32m+[m[32m            'access' => [[m
+[32m+[m[32m                'class' => AccessControl::className(),[m
+[32m+[m[32m                'rules' => [[m
+[32m+[m[32m                    [[m
+[32m+[m[32m                        'actions' => ['login', 'error'],[m
+[32m+[m[32m                        'allow' => true,[m
+[32m+[m[32m                    ],[m
+[32m+[m[32m                    [[m
+[32m+[m[32m                        'actions' => ['logout', 'index'],[m
+[32m+[m[32m                        'allow' => true,[m
+[32m+[m[32m                        'roles' => ['@'],[m
+[32m+[m[32m                    ],[m
+[32m+[m[32m                ],[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            'verbs' => [[m
+[32m+[m[32m                'class' => VerbFilter::className(),[m
+[32m+[m[32m                'actions' => [[m
+[32m+[m[32m                    'logout' => ['post'],[m
+[32m+[m[32m                ],[m
+[32m+[m[32m            ],[m
+[32m+[m[32m        ];[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function actions()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return [[m
+[32m+[m[32m            'error' => [[m
+[32m+[m[32m                'class' => 'yii\web\ErrorAction',[m
+[32m+[m[32m            ],[m
+[32m+[m[32m        ];[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public function actionIndex()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return $this->render('index');[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public function actionLogin()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if (!\Yii::$app->user->isGuest) {[m
+[32m+[m[32m            return $this->goHome();[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        $model = new LoginForm();[m
+[32m+[m[32m        if ($model->load(Yii::$app->request->post()) && $model->login()) {[m
+[32m+[m[32m            return $this->goBack();[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m            return $this->render('login', [[m
+[32m+[m[32m                'model' => $model,[m
+[32m+[m[32m            ]);[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public function actionLogout()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        Yii::$app->user->logout();[m
+[32m+[m
+[32m+[m[32m        return $this->goHome();[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/backend/models/.gitkeep b/backend/models/.gitkeep[m
+[1mnew file mode 100755[m
+[1mindex 0000000..72e8ffc[m
+[1m--- /dev/null[m
+[1m+++ b/backend/models/.gitkeep[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m*[m
+[1mdiff --git a/backend/runtime/.gitignore b/backend/runtime/.gitignore[m
+[1mnew file mode 100755[m
+[1mindex 0000000..c96a04f[m
+[1m--- /dev/null[m
+[1m+++ b/backend/runtime/.gitignore[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m*[m
+[32m+[m[32m!.gitignore[m
+\ No newline at end of file[m
+[1mdiff --git a/backend/views/layouts/main.php b/backend/views/layouts/main.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..d5ded73[m
+[1m--- /dev/null[m
+[1m+++ b/backend/views/layouts/main.php[m
+[36m@@ -0,0 +1,76 @@[m
+[32m+[m[32m<?php[m
+[32m+[m
+[32m+[m[32m/* @var $this \yii\web\View */[m
+[32m+[m[32m/* @var $content string */[m
+[32m+[m
+[32m+[m[32muse backend\assets\AppAsset;[m
+[32m+[m[32muse yii\helpers\Html;[m
+[32m+[m[32muse yii\bootstrap\Nav;[m
+[32m+[m[32muse yii\bootstrap\NavBar;[m
+[32m+[m[32muse yii\widgets\Breadcrumbs;[m
+[32m+[m[32muse common\widgets\Alert;[m
+[32m+[m
+[32m+[m[32mAppAsset::register($this);[m
+[32m+[m[32m?>[m
+[32m+[m[32m<?php $this->beginPage() ?>[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="<?= Yii::$app->language ?>">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="<?= Yii::$app->charset ?>">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1">[m
+[32m+[m[32m    <?= Html::csrfMetaTags() ?>[m
+[32m+[m[32m    <title><?= Html::encode($this->title) ?></title>[m
+[32m+[m[32m    <?php $this->head() ?>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m<?php $this->beginBody() ?>[m
+[32m+[m
+[32m+[m[32m<div class="wrap">[m
+[32m+[m[32m    <?php[m
+[32m+[m[32m    NavBar::begin([[m
+[32m+[m[32m        'brandLabel' => 'My Company',[m
+[32m+[m[32m        'brandUrl' => Yii::$app->homeUrl,[m
+[32m+[m[32m        'options' => [[m
+[32m+[m[32m            'class' => 'navbar-inverse navbar-fixed-top',[m
+[32m+[m[32m        ],[m
+[32m+[m[32m    ]);[m
+[32m+[m[32m    $menuItems = [[m
+[32m+[m[32m        ['label' => 'Home', 'url' => ['/site/index']],[m
+[32m+[m[32m    ];[m
+[32m+[m[32m    if (Yii::$app->user->isGuest) {[m
+[32m+[m[32m        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];[m
+[32m+[m[32m    } else {[m
+[32m+[m[32m        $menuItems[] = [[m
+[32m+[m[32m            'label' => 'Logout (' . Yii::$app->user->identity->username . ')',[m
+[32m+[m[32m            'url' => ['/site/logout'],[m
+[32m+[m[32m            'linkOptions' => ['data-method' => 'post'][m
+[32m+[m[32m        ];[m
+[32m+[m[32m    }[m
+[32m+[m[32m    echo Nav::widget([[m
+[32m+[m[32m        'options' => ['class' => 'navbar-nav navbar-right'],[m
+[32m+[m[32m        'items' => $menuItems,[m
+[32m+[m[32m    ]);[m
+[32m+[m[32m    NavBar::end();[m
+[32m+[m[32m    ?>[m
+[32m+[m
+[32m+[m[32m    <div class="container">[m
+[32m+[m[32m        <?= Breadcrumbs::widget([[m
+[32m+[m[32m            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],[m
+[32m+[m[32m        ]) ?>[m
+[32m+[m[32m        <?= Alert::widget() ?>[m
+[32m+[m[32m        <?= $content ?>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m</div>[m
+[32m+[m
+[32m+[m[32m<footer class="footer">[m
+[32m+[m[32m    <div class="container">[m
+[32m+[m[32m        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>[m
+[32m+[m
+[32m+[m[32m        <p class="pull-right"><?= Yii::powered() ?></p>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m</footer>[m
+[32m+[m
+[32m+[m[32m<?php $this->endBody() ?>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+[32m+[m[32m<?php $this->endPage() ?>[m
+[1mdiff --git a/backend/views/site/error.php b/backend/views/site/error.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..0ba2574[m
+[1m--- /dev/null[m
+[1m+++ b/backend/views/site/error.php[m
+[36m@@ -0,0 +1,27 @@[m
+[32m+[m[32m<?php[m
+[32m+[m
+[32m+[m[32m/* @var $this yii\web\View */[m
+[32m+[m[32m/* @var $name string */[m
+[32m+[m[32m/* @var $message string */[m
+[32m+[m[32m/* @var $exception Exception */[m
+[32m+[m
+[32m+[m[32muse yii\helpers\Html;[m
+[32m+[m
+[32m+[m[32m$this->title = $name;[m
+[32m+[m[32m?>[m
+[32m+[m[32m<div class="site-error">[m
+[32m+[m
+[32m+[m[32m    <h1><?= Html::encode($this->title) ?></h1>[m
+[32m+[m
+[32m+[m[32m    <div class="alert alert-danger">[m
+[32m+[m[32m        <?= nl2br(Html::encode($message)) ?>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <p>[m
+[32m+[m[32m        The above error occurred while the Web server was processing your request.[m
+[32m+[m[32m    </p>[m
+[32m+[m[32m    <p>[m
+[32m+[m[32m        Please contact us if you think this is a server error. Thank you.[m
+[32m+[m[32m    </p>[m
+[32m+[m
+[32m+[m[32m</div>[m
+[1mdiff --git a/backend/views/site/index.php b/backend/views/site/index.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..f780610[m
+[1m--- /dev/null[m
+[1m+++ b/backend/views/site/index.php[m
+[36m@@ -0,0 +1,53 @@[m
+[32m+[m[32m<?php[m
+[32m+[m
+[32m+[m[32m/* @var $this yii\web\View */[m
+[32m+[m
+[32m+[m[32m$this->title = 'My Yii Application';[m
+[32m+[m[32m?>[m
+[32m+[m[32m<div class="site-index">[m
+[32m+[m
+[32m+[m[32m    <div class="jumbotron">[m
+[32m+[m[32m        <h1>Congratulations!</h1>[m
+[32m+[m
+[32m+[m[32m        <p class="lead">You have successfully created your Yii-powered application.</p>[m
+[32m+[m
+[32m+[m[32m        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div class="body-content">[m
+[32m+[m
+[32m+[m[32m        <div class="row">[m
+[32m+[m[32m            <div class="col-lg-4">[m
+[32m+[m[32m                <h2>Heading</h2>[m
+[32m+[m
+[32m+[m[32m                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et[m
+[32m+[m[32m                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip[m
+[32m+[m[32m                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu[m
+[32m+[m[32m                    fugiat nulla pariatur.</p>[m
+[32m+[m
+[32m+[m[32m                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div class="col-lg-4">[m
+[32m+[m[32m                <h2>Heading</h2>[m
+[32m+[m
+[32m+[m[32m                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et[m
+[32m+[m[32m                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip[m
+[32m+[m[32m                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu[m
+[32m+[m[32m                    fugiat nulla pariatur.</p>[m
+[32m+[m
+[32m+[m[32m                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div class="col-lg-4">[m
+[32m+[m[32m                <h2>Heading</h2>[m
+[32m+[m
+[32m+[m[32m                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et[m
+[32m+[m[32m                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip[m
+[32m+[m[32m                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu[m
+[32m+[m[32m                    fugiat nulla pariatur.</p>[m
+[32m+[m
+[32m+[m[32m                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m</div>[m
+[1mdiff --git a/backend/views/site/login.php b/backend/views/site/login.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..ec9cc06[m
+[1m--- /dev/null[m
+[1m+++ b/backend/views/site/login.php[m
+[36m@@ -0,0 +1,35 @@[m
+[32m+[m[32m<?php[m
+[32m+[m
+[32m+[m[32m/* @var $this yii\web\View */[m
+[32m+[m[32m/* @var $form yii\bootstrap\ActiveForm */[m
+[32m+[m[32m/* @var $model \common\models\LoginForm */[m
+[32m+[m
+[32m+[m[32muse yii\helpers\Html;[m
+[32m+[m[32muse yii\bootstrap\ActiveForm;[m
+[32m+[m
+[32m+[m[32m$this->title = 'Login';[m
+[32m+[m[32m$this->params['breadcrumbs'][] = $this->title;[m
+[32m+[m[32m?>[m
+[32m+[m[32m<div class="site-login">[m
+[32m+[m[32m    <h1><?= Html::encode($this->title) ?></h1>[m
+[32m+[m
+[32m+[m[32m    <p>Please fill out the following fields to login:</p>[m
+[32m+[m
+[32m+[m[32m    <div class="row">[m
+[32m+[m[32m        <div class="col-lg-5">[m
+[32m+[m[32m            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>[m
+[32m+[m
+[32m+[m[32m                <?= $form->field($model, 'username') ?>[m
+[32m+[m
+[32m+[m[32m                <?= $form->field($model, 'password')->passwordInput() ?>[m
+[32m+[m
+[32m+[m[32m                <?= $form->field($model, 'rememberMe')->checkbox() ?>[m
+[32m+[m
+[32m+[m[32m                <div class="form-group">[m
+[32m+[m[32m                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>[m
+[32m+[m[32m                </div>[m
+[32m+[m
+[32m+[m[32m            <?php ActiveForm::end(); ?>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m</div>[m
+[1mdiff --git a/backend/web/.gitignore b/backend/web/.gitignore[m
+[1mnew file mode 100755[m
+[1mindex 0000000..25c74e6[m
+[1m--- /dev/null[m
+[1m+++ b/backend/web/.gitignore[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m/index.php[m
+[32m+[m[32m/index-test.php[m
+[1mdiff --git a/backend/web/assets/.gitignore b/backend/web/assets/.gitignore[m
+[1mnew file mode 100755[m
+[1mindex 0000000..d6b7ef3[m
+[1m--- /dev/null[m
+[1m+++ b/backend/web/assets/.gitignore[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m*[m
+[32m+[m[32m!.gitignore[m
+[1mdiff --git a/backend/web/css/site.css b/backend/web/css/site.css[m
+[1mnew file mode 100755[m
+[1mindex 0000000..698be70[m
+[1m--- /dev/null[m
+[1m+++ b/backend/web/css/site.css[m
+[36m@@ -0,0 +1,91 @@[m
+[32m+[m[32mhtml,[m
+[32m+[m[32mbody {[m
+[32m+[m[32m    height: 100%;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.wrap {[m
+[32m+[m[32m    min-height: 100%;[m
+[32m+[m[32m    height: auto;[m
+[32m+[m[32m    margin: 0 auto -60px;[m
+[32m+[m[32m    padding: 0 0 60px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.wrap > .container {[m
+[32m+[m[32m    padding: 70px 15px 20px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.footer {[m
+[32m+[m[32m    height: 60px;[m
+[32m+[m[32m    background-color: #f5f5f5;[m
+[32m+[m[32m    border-top: 1px solid #ddd;[m
+[32m+[m[32m    padding-top: 20px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.jumbotron {[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    background-color: transparent;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.jumbotron .btn {[m
+[32m+[m[32m    font-size: 21px;[m
+[32m+[m[32m    padding: 14px 24px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.not-set {[m
+[32m+[m[32m    color: #c55;[m
+[32m+[m[32m    font-style: italic;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* add sorting icons to gridview sort links */[m
+[32m+[m[32ma.asc:after, a.desc:after {[m
+[32m+[m[32m    position: relative;[m
+[32m+[m[32m    top: 1px;[m
+[32m+[m[32m    display: inline-block;[m
+[32m+[m[32m    font-family: 'Glyphicons Halflings';[m
+[32m+[m[32m    font-style: normal;[m
+[32m+[m[32m    font-weight: normal;[m
+[32m+[m[32m    line-height: 1;[m
+[32m+[m[32m    padding-left: 5px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32ma.asc:after {[m
+[32m+[m[32m    content: /*"\e113"*/ "\e151";[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32ma.desc:after {[m
+[32m+[m[32m    content: /*"\e114"*/ "\e152";[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.sort-numerical a.asc:after {[m
+[32m+[m[32m    content: "\e153";[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.sort-numerical a.desc:after {[m
+[32m+[m[32m    content: "\e154";[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.sort-ordinal a.asc:after {[m
+[32m+[m[32m    content: "\e155";[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.sort-ordinal a.desc:after {[m
+[32m+[m[32m    content: "\e156";[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.grid-view th {[m
+[32m+[m[32m    white-space: nowrap;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.hint-block {[m
+[32m+[m[32m    display: block;[m
+[32m+[m[32m    margin-top: 5px;[m
+[32m+[m[32m    color: #999;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.error-summary {[m
+[32m+[m[32m    color: #a94442;[m
+[32m+[m[32m    background: #fdf7f7;[m
+[32m+[m[32m    border-left: 3px solid #eed3d7;[m
+[32m+[m[32m    padding: 10px 20px;[m
+[32m+[m[32m    margin: 0 0 15px 0;[m
+[32m+[m[32m}[m
+[1mdiff --git a/backend/web/favicon.ico b/backend/web/favicon.ico[m
+[1mnew file mode 100755[m
+[1mindex 0000000..580ed73[m
+Binary files /dev/null and b/backend/web/favicon.ico differ
+[1mdiff --git a/backend/web/robots.txt b/backend/web/robots.txt[m
+[1mnew file mode 100755[m
+[1mindex 0000000..1f53798[m
+[1m--- /dev/null[m
+[1m+++ b/backend/web/robots.txt[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32mUser-agent: *[m
+[32m+[m[32mDisallow: /[m
+[1mdiff --git a/common/config/.gitignore b/common/config/.gitignore[m
+[1mnew file mode 100755[m
+[1mindex 0000000..97c0f01[m
+[1m--- /dev/null[m
+[1m+++ b/common/config/.gitignore[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32mmain-local.php[m
+[32m+[m[32mparams-local.php[m
+[1mdiff --git a/common/config/bootstrap.php b/common/config/bootstrap.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..ecc13e5[m
+[1m--- /dev/null[m
+[1m+++ b/common/config/bootstrap.php[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32mYii::setAlias('common', dirname(__DIR__));[m
+[32m+[m[32mYii::setAlias('frontend', dirname(dirname(__DIR__)) . '/frontend');[m
+[32m+[m[32mYii::setAlias('backend', dirname(dirname(__DIR__)) . '/backend');[m
+[32m+[m[32mYii::setAlias('console', dirname(dirname(__DIR__)) . '/console');[m
+[1mdiff --git a/common/config/main.php b/common/config/main.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..c9071d1[m
+[1m--- /dev/null[m
+[1m+++ b/common/config/main.php[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32mreturn [[m
+[32m+[m[32m    'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',[m
+[32m+[m[32m    'components' => [[m
+[32m+[m[32m        'cache' => [[m
+[32m+[m[32m            'class' => 'yii\caching\FileCache',[m
+[32m+[m[32m        ],[m
+[32m+[m[32m    ],[m
+[32m+[m[32m];[m
+[1mdiff --git a/common/config/params.php b/common/config/params.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..4ec9ba6[m
+[1m--- /dev/null[m
+[1m+++ b/common/config/params.php[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32mreturn [[m
+[32m+[m[32m    'adminEmail' => 'admin@example.com',[m
+[32m+[m[32m    'supportEmail' => 'support@example.com',[m
+[32m+[m[32m    'user.passwordResetTokenExpire' => 3600,[m
+[32m+[m[32m];[m
+[1mdiff --git a/common/mail/layouts/html.php b/common/mail/layouts/html.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..bddbc61[m
+[1m--- /dev/null[m
+[1m+++ b/common/mail/layouts/html.php[m
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32muse yii\helpers\Html;[m
+[32m+[m
+[32m+[m[32m/* @var $this \yii\web\View view component instance */[m
+[32m+[m[32m/* @var $message \yii\mail\MessageInterface the message being composed */[m
+[32m+[m[32m/* @var $content string main view render result */[m
+[32m+[m[32m?>[m
+[32m+[m[32m<?php $this->beginPage() ?>[m
+[32m+[m[32m<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">[m
+[32m+[m[32m<html xmlns="http://www.w3.org/1999/xhtml">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta http-equiv="Content-Type" content="text/html; charset=<?= Yii::$app->charset ?>" />[m
+[32m+[m[32m    <title><?= Html::encode($this->title) ?></title>[m
+[32m+[m[32m    <?php $this->head() ?>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <?php $this->beginBody() ?>[m
+[32m+[m[32m    <?= $content ?>[m
+[32m+[m[32m    <?php $this->endBody() ?>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+[32m+[m[32m<?php $this->endPage() ?>[m
+[1mdiff --git a/common/mail/layouts/text.php b/common/mail/layouts/text.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..7087cea[m
+[1m--- /dev/null[m
+[1m+++ b/common/mail/layouts/text.php[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32muse yii\helpers\Html;[m
+[32m+[m
+[32m+[m[32m/* @var $this \yii\web\View view component instance */[m
+[32m+[m[32m/* @var $message \yii\mail\MessageInterface the message being composed */[m
+[32m+[m[32m/* @var $content string main view render result */[m
+[32m+[m[32m?>[m
+[32m+[m[32m<?php $this->beginPage() ?>[m
+[32m+[m[32m<?php $this->beginBody() ?>[m
+[32m+[m[32m<?= $content ?>[m
+[32m+[m[32m<?php $this->endBody() ?>[m
+[32m+[m[32m<?php $this->endPage() ?>[m
+[1mdiff --git a/common/mail/passwordResetToken-html.php b/common/mail/passwordResetToken-html.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..f3daf49[m
+[1m--- /dev/null[m
+[1m+++ b/common/mail/passwordResetToken-html.php[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32muse yii\helpers\Html;[m
+[32m+[m
+[32m+[m[32m/* @var $this yii\web\View */[m
+[32m+[m[32m/* @var $user common\models\User */[m
+[32m+[m
+[32m+[m[32m$resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/reset-password', 'token' => $user->password_reset_token]);[m
+[32m+[m[32m?>[m
+[32m+[m[32m<div class="password-reset">[m
+[32m+[m[32m    <p>Hello <?= Html::encode($user->username) ?>,</p>[m
+[32m+[m
+[32m+[m[32m    <p>Follow the link below to reset your password:</p>[m
+[32m+[m
+[32m+[m[32m    <p><?= Html::a(Html::encode($resetLink), $resetLink) ?></p>[m
+[32m+[m[32m</div>[m
+[1mdiff --git a/common/mail/passwordResetToken-text.php b/common/mail/passwordResetToken-text.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..244c0cb[m
+[1m--- /dev/null[m
+[1m+++ b/common/mail/passwordResetToken-text.php[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m<?php[m
+[32m+[m
+[32m+[m[32m/* @var $this yii\web\View */[m
+[32m+[m[32m/* @var $user common\models\User */[m
+[32m+[m
+[32m+[m[32m$resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/reset-password', 'token' => $user->password_reset_token]);[m
+[32m+[m[32m?>[m
+[32m+[m[32mHello <?= $user->username ?>,[m
+[32m+[m
+[32m+[m[32mFollow the link below to reset your password:[m
+[32m+[m
+[32m+[m[32m<?= $resetLink ?>[m
+[1mdiff --git a/common/models/LoginForm.php b/common/models/LoginForm.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..afc1c23[m
+[1m--- /dev/null[m
+[1m+++ b/common/models/LoginForm.php[m
+[36m@@ -0,0 +1,78 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32mnamespace common\models;[m
+[32m+[m
+[32m+[m[32muse Yii;[m
+[32m+[m[32muse yii\base\Model;[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * Login form[m
+[32m+[m[32m */[m
+[32m+[m[32mclass LoginForm extends Model[m
+[32m+[m[32m{[m
+[32m+[m[32m    public $username;[m
+[32m+[m[32m    public $password;[m
+[32m+[m[32m    public $rememberMe = true;[m
+[32m+[m
+[32m+[m[32m    private $_user;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function rules()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return [[m
+[32m+[m[32m            // username and password are both required[m
+[32m+[m[32m            [['username', 'password'], 'required'],[m
+[32m+[m[32m            // rememberMe must be a boolean value[m
+[32m+[m[32m            ['rememberMe', 'boolean'],[m
+[32m+[m[32m            // password is validated by validatePassword()[m
+[32m+[m[32m            ['password', 'validatePassword'],[m
+[32m+[m[32m        ];[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Validates the password.[m
+[32m+[m[32m     * This method serves as the inline validation for password.[m
+[32m+[m[32m     *[m
+[32m+[m[32m     * @param string $attribute the attribute currently being validated[m
+[32m+[m[32m     * @param array $params the additional name-value pairs given in the rule[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function validatePassword($attribute, $params)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if (!$this->hasErrors()) {[m
+[32m+[m[32m            $user = $this->getUser();[m
+[32m+[m[32m            if (!$user || !$user->validatePassword($this->password)) {[m
+[32m+[m[32m                $this->addError($attribute, 'Incorrect username or password.');[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Logs in a user using the provided username and password.[m
+[32m+[m[32m     *[m
+[32m+[m[32m     * @return boolean whether the user is logged in successfully[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function login()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if ($this->validate()) {[m
+[32m+[m[32m            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m            return false;[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Finds user by [[username]][m
+[32m+[m[32m     *[m
+[32m+[m[32m     * @return User|null[m
+[32m+[m[32m     */[m
+[32m+[m[32m    protected function getUser()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if ($this->_user === null) {[m
+[32m+[m[32m            $this->_user = User::findByUsername($this->username);[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        return $this->_user;[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/common/models/User.php b/common/models/User.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..ce78fcd[m
+[1m--- /dev/null[m
+[1m+++ b/common/models/User.php[m
+[36m@@ -0,0 +1,188 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32mnamespace common\models;[m
+[32m+[m
+[32m+[m[32muse Yii;[m
+[32m+[m[32muse yii\base\NotSupportedException;[m
+[32m+[m[32muse yii\behaviors\TimestampBehavior;[m
+[32m+[m[32muse yii\db\ActiveRecord;[m
+[32m+[m[32muse yii\web\IdentityInterface;[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * User model[m
+[32m+[m[32m *[m
+[32m+[m[32m * @property integer $id[m
+[32m+[m[32m * @property string $username[m
+[32m+[m[32m * @property string $password_hash[m
+[32m+[m[32m * @property string $password_reset_token[m
+[32m+[m[32m * @property string $email[m
+[32m+[m[32m * @property string $auth_key[m
+[32m+[m[32m * @property integer $status[m
+[32m+[m[32m * @property integer $created_at[m
+[32m+[m[32m * @property integer $updated_at[m
+[32m+[m[32m * @property string $password write-only password[m
+[32m+[m[32m */[m
+[32m+[m[32mclass User extends ActiveRecord implements IdentityInterface[m
+[32m+[m[32m{[m
+[32m+[m[32m    const STATUS_DELETED = 0;[m
+[32m+[m[32m    const STATUS_ACTIVE = 10;[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public static function tableName()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return '{{%user}}';[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function behaviors()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return [[m
+[32m+[m[32m            TimestampBehavior::className(),[m
+[32m+[m[32m        ];[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function rules()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return [[m
+[32m+[m[32m            ['status', 'default', 'value' => self::STATUS_ACTIVE],[m
+[32m+[m[32m            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],[m
+[32m+[m[32m        ];[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public static function findIdentity($id)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public static function findIdentityByAccessToken($token, $type = null)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Finds user by username[m
+[32m+[m[32m     *[m
+[32m+[m[32m     * @param string $username[m
+[32m+[m[32m     * @return static|null[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public static function findByUsername($username)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Finds user by password reset token[m
+[32m+[m[32m     *[m
+[32m+[m[32m     * @param string $token password reset token[m
+[32m+[m[32m     * @return static|null[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public static function findByPasswordResetToken($token)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if (!static::isPasswordResetTokenValid($token)) {[m
+[32m+[m[32m            return null;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        return static::findOne([[m
+[32m+[m[32m            'password_reset_token' => $token,[m
+[32m+[m[32m            'status' => self::STATUS_ACTIVE,[m
+[32m+[m[32m        ]);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Finds out if password reset token is valid[m
+[32m+[m[32m     *[m
+[32m+[m[32m     * @param string $token password reset token[m
+[32m+[m[32m     * @return boolean[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public static function isPasswordResetTokenValid($token)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if (empty($token)) {[m
+[32m+[m[32m            return false;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        $timestamp = (int) substr($token, strrpos($token, '_') + 1);[m
+[32m+[m[32m        $expire = Yii::$app->params['user.passwordResetTokenExpire'];[m
+[32m+[m[32m        return $timestamp + $expire >= time();[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function getId()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return $this->getPrimaryKey();[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function getAuthKey()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return $this->auth_key;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @inheritdoc[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function validateAuthKey($authKey)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return $this->getAuthKey() === $authKey;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Validates password[m
+[32m+[m[32m     *[m
+[32m+[m[32m     * @param string $password password to validate[m
+[32m+[m[32m     * @return boolean if password provided is valid for current user[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function validatePassword($password)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return Yii::$app->security->validatePassword($password, $this->password_hash);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Generates password hash from password and sets it to the model[m
+[32m+[m[32m     *[m
+[32m+[m[32m     * @param string $password[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function setPassword($password)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        $this->password_hash = Yii::$app->security->generatePasswordHash($password);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Generates "remember me" authentication key[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function generateAuthKey()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        $this->auth_key = Yii::$app->security->generateRandomString();[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Generates new password reset token[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function generatePasswordResetToken()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Removes password reset token[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public function removePasswordResetToken()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        $this->password_reset_token = null;[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/common/widgets/Alert.php b/common/widgets/Alert.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..8f1e590[m
+[1m--- /dev/null[m
+[1m+++ b/common/widgets/Alert.php[m
+[36m@@ -0,0 +1,79 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32m/**[m
+[32m+[m[32m * @link http://www.yiiframework.com/[m
+[32m+[m[32m * @copyright Copyright (c) 2008 Yii Software LLC[m
+[32m+[m[32m * @license http://www.yiiframework.com/license/[m
+[32m+[m[32m */[m
+[32m+[m
+[32m+[m[32mnamespace common\widgets;[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * Alert widget renders a message from session flash. All flash messages are displayed[m
+[32m+[m[32m * in the sequence they were assigned using setFlash. You can set message as following:[m
+[32m+[m[32m *[m
+[32m+[m[32m * ```php[m
+[32m+[m[32m * \Yii::$app->session->setFlash('error', 'This is the message');[m
+[32m+[m[32m * \Yii::$app->session->setFlash('success', 'This is the message');[m
+[32m+[m[32m * \Yii::$app->session->setFlash('info', 'This is the message');[m
+[32m+[m[32m * ```[m
+[32m+[m[32m *[m
+[32m+[m[32m * Multiple messages could be set as follows:[m
+[32m+[m[32m *[m
+[32m+[m[32m * ```php[m
+[32m+[m[32m * \Yii::$app->session->setFlash('error', ['Error 1', 'Error 2']);[m
+[32m+[m[32m * ```[m
+[32m+[m[32m *[m
+[32m+[m[32m * @author Kartik Visweswaran <kartikv2@gmail.com>[m
+[32m+[m[32m * @author Alexander Makarov <sam@rmcreative.ru>[m
+[32m+[m[32m */[m
+[32m+[m[32mclass Alert extends \yii\bootstrap\Widget[m
+[32m+[m[32m{[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @var array the alert types configuration for the flash messages.[m
+[32m+[m[32m     * This array is setup as $key => $value, where:[m
+[32m+[m[32m     * - $key is the name of the session flash variable[m
+[32m+[m[32m     * - $value is the bootstrap alert type (i.e. danger, success, info, warning)[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public $alertTypes = [[m
+[32m+[m[32m        'error'   => 'alert-danger',[m
+[32m+[m[32m        'danger'  => 'alert-danger',[m
+[32m+[m[32m        'success' => 'alert-success',[m
+[32m+[m[32m        'info'    => 'alert-info',[m
+[32m+[m[32m        'warning' => 'alert-warning'[m
+[32m+[m[32m    ];[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @var array the options for rendering the close button tag.[m
+[32m+[m[32m     */[m
+[32m+[m[32m    public $closeButton = [];[m
+[32m+[m
+[32m+[m[32m    public function init()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        parent::init();[m
+[32m+[m
+[32m+[m[32m        $session = \Yii::$app->session;[m
+[32m+[m[32m        $flashes = $session->getAllFlashes();[m
+[32m+[m[32m        $appendCss = isset($this->options['class']) ? ' ' . $this->options['class'] : '';[m
+[32m+[m
+[32m+[m[32m        foreach ($flashes as $type => $data) {[m
+[32m+[m[32m            if (isset($this->alertTypes[$type])) {[m
+[32m+[m[32m                $data = (array) $data;[m
+[32m+[m[32m                foreach ($data as $i => $message) {[m
+[32m+[m[32m                    /* initialize css class for each alert box */[m
+[32m+[m[32m                    $this->options['class'] = $this->alertTypes[$type] . $appendCss;[m
+[32m+[m
+[32m+[m[32m                    /* assign unique id to each alert box */[m
+[32m+[m[32m                    $this->options['id'] = $this->getId() . '-' . $type . '-' . $i;[m
+[32m+[m
+[32m+[m[32m                    echo \yii\bootstrap\Alert::widget([[m
+[32m+[m[32m                        'body' => $message,[m
+[32m+[m[32m                        'closeButton' => $this->closeButton,[m
+[32m+[m[32m                        'options' => $this->options,[m
+[32m+[m[32m                    ]);[m
+[32m+[m[32m                }[m
+[32m+[m
+[32m+[m[32m                $session->removeFlash($type);[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/composer.json b/composer.json[m
+[1mnew file mode 100755[m
+[1mindex 0000000..22993b0[m
+[1m--- /dev/null[m
+[1m+++ b/composer.json[m
+[36m@@ -0,0 +1,37 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m    "name": "yiisoft/yii2-app-advanced",[m
+[32m+[m[32m    "description": "Yii 2 Advanced Project Template",[m
+[32m+[m[32m    "keywords": ["yii2", "framework", "advanced", "project template"],[m
+[32m+[m[32m    "homepage": "http://www.yiiframework.com/",[m
+[32m+[m[32m    "type": "project",[m
+[32m+[m[32m    "license": "BSD-3-Clause",[m
+[32m+[m[32m    "support": {[m
+[32m+[m[32m        "issues": "https://github.com/yiisoft/yii2/issues?state=open",[m
+[32m+[m[32m        "forum": "http://www.yiiframework.com/forum/",[m
+[32m+[m[32m        "wiki": "http://www.yiiframework.com/wiki/",[m
+[32m+[m[32m        "irc": "irc://irc.freenode.net/yii",[m
+[32m+[m[32m        "source": "https://github.com/yiisoft/yii2"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "minimum-stability": "stable",[m
+[32m+[m[32m    "require": {[m
+[32m+[m[32m        "php": ">=5.4.0",[m
+[32m+[m[32m        "yiisoft/yii2": ">=2.0.6",[m
+[32m+[m[32m        "yiisoft/yii2-bootstrap": "*",[m
+[32m+[m[32m        "yiisoft/yii2-swiftmailer": "*"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "require-dev": {[m
+[32m+[m[32m        "yiisoft/yii2-codeception": "*",[m
+[32m+[m[32m        "yiisoft/yii2-debug": "*",[m
+[32m+[m[32m        "yiisoft/yii2-gii": "*",[m
+[32m+[m[32m        "yiisoft/yii2-faker": "*"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "config": {[m
+[32m+[m[32m        "process-timeout": 1800[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "extra": {[m
+[32m+[m[32m        "asset-installer-paths": {[m
+[32m+[m[32m            "npm-asset-library": "vendor/npm",[m
+[32m+[m[32m            "bower-asset-library": "vendor/bower"[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/composer.lock b/composer.lock[m
+[1mnew file mode 100755[m
+[1mindex 0000000..6a29fb3[m
+[1m--- /dev/null[m
+[1m+++ b/composer.lock[m
+[36m@@ -0,0 +1,924 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m    "_readme": [[m
+[32m+[m[32m        "This file locks the dependencies of your project to a known state",[m
+[32m+[m[32m        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",[m
+[32m+[m[32m        "This file is @generated automatically"[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "hash": "8580bd82955b1fbb80d47024e184056e",[m
+[32m+[m[32m    "packages": [[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "bower-asset/bootstrap",[m
+[32m+[m[32m            "version": "v3.3.5",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/twbs/bootstrap.git",[m
+[32m+[m[32m                "reference": "16b48259a62f576e52c903c476bd42b90ab22482"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/16b48259a62f576e52c903c476bd42b90ab22482",[m
+[32m+[m[32m                "reference": "16b48259a62f576e52c903c476bd42b90ab22482",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require": {[m
+[32m+[m[32m                "bower-asset/jquery": ">=1.9.1"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "type": "bower-asset-library",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "bower-asset-main": [[m
+[32m+[m[32m                    "less/bootstrap.less",[m
+[32m+[m[32m                    "dist/js/bootstrap.js"[m
+[32m+[m[32m                ],[m
+[32m+[m[32m                "bower-asset-ignore": [[m
+[32m+[m[32m                    "/.*",[m
+[32m+[m[32m                    "_config.yml",[m
+[32m+[m[32m                    "CNAME",[m
+[32m+[m[32m                    "composer.json",[m
+[32m+[m[32m                    "CONTRIBUTING.md",[m
+[32m+[m[32m                    "docs",[m
+[32m+[m[32m                    "js/tests",[m
+[32m+[m[32m                    "test-infra"[m
+[32m+[m[32m                ][m
+[32m+[m[32m            },[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "MIT"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",[m
+[32m+[m[32m            "keywords": [[m
+[32m+[m[32m                "css",[m
+[32m+[m[32m                "framework",[m
+[32m+[m[32m                "front-end",[m
+[32m+[m[32m                "js",[m
+[32m+[m[32m                "less",[m
+[32m+[m[32m                "mobile-first",[m
+[32m+[m[32m                "responsive",[m
+[32m+[m[32m                "web"[m
+[32m+[m[32m            ][m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "bower-asset/jquery",[m
+[32m+[m[32m            "version": "2.1.4",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/jquery/jquery.git",[m
+[32m+[m[32m                "reference": "7751e69b615c6eca6f783a81e292a55725af6b85"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/jquery/jquery/zipball/7751e69b615c6eca6f783a81e292a55725af6b85",[m
+[32m+[m[32m                "reference": "7751e69b615c6eca6f783a81e292a55725af6b85",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require-dev": {[m
+[32m+[m[32m                "bower-asset/qunit": "1.14.0",[m
+[32m+[m[32m                "bower-asset/requirejs": "2.1.10",[m
+[32m+[m[32m                "bower-asset/sinon": "1.8.1",[m
+[32m+[m[32m                "bower-asset/sizzle": "2.1.1-patch2"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "type": "bower-asset-library",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "bower-asset-main": "dist/jquery.js",[m
+[32m+[m[32m                "bower-asset-ignore": [[m
+[32m+[m[32m                    "**/.*",[m
+[32m+[m[32m                    "build",[m
+[32m+[m[32m                    "dist/cdn",[m
+[32m+[m[32m                    "speed",[m
+[32m+[m[32m                    "test",[m
+[32m+[m[32m                    "*.md",[m
+[32m+[m[32m                    "AUTHORS.txt",[m
+[32m+[m[32m                    "Gruntfile.js",[m
+[32m+[m[32m                    "package.json"[m
+[32m+[m[32m                ][m
+[32m+[m[32m            },[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "MIT"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "keywords": [[m
+[32m+[m[32m                "javascript",[m
+[32m+[m[32m                "jquery",[m
+[32m+[m[32m                "library"[m
+[32m+[m[32m            ][m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "bower-asset/jquery.inputmask",[m
+[32m+[m[32m            "version": "3.1.63",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/RobinHerbots/jquery.inputmask.git",[m
+[32m+[m[32m                "reference": "c40c7287eadc31e341ebbf0c02352eb55b9cbc48"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/c40c7287eadc31e341ebbf0c02352eb55b9cbc48",[m
+[32m+[m[32m                "reference": "c40c7287eadc31e341ebbf0c02352eb55b9cbc48",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require": {[m
+[32m+[m[32m                "bower-asset/jquery": ">=1.7"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "type": "bower-asset-library",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "bower-asset-main": [[m
+[32m+[m[32m                    "./dist/inputmask/jquery.inputmask.js",[m
+[32m+[m[32m                    "./dist/inputmask/jquery.inputmask.extensions.js",[m
+[32m+[m[32m                    "./dist/inputmask/jquery.inputmask.date.extensions.js",[m
+[32m+[m[32m                    "./dist/inputmask/jquery.inputmask.numeric.extensions.js",[m
+[32m+[m[32m                    "./dist/inputmask/jquery.inputmask.phone.extensions.js",[m
+[32m+[m[32m                    "./dist/inputmask/jquery.inputmask.regex.extensions.js"[m
+[32m+[m[32m                ],[m
+[32m+[m[32m                "bower-asset-ignore": [[m
+[32m+[m[32m                    "**/.*",[m
+[32m+[m[32m                    "qunit/",[m
+[32m+[m[32m                    "nuget/",[m
+[32m+[m[32m                    "tools/",[m
+[32m+[m[32m                    "js/",[m
+[32m+[m[32m                    "*.md",[m
+[32m+[m[32m                    "build.properties",[m
+[32m+[m[32m                    "build.xml",[m
+[32m+[m[32m                    "jquery.inputmask.jquery.json"[m
+[32m+[m[32m                ][m
+[32m+[m[32m            },[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "http://opensource.org/licenses/mit-license.php"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "description": "jquery.inputmask is a jquery plugin which create an input mask.",[m
+[32m+[m[32m            "keywords": [[m
+[32m+[m[32m                "form",[m
+[32m+[m[32m                "input",[m
+[32m+[m[32m                "inputmask",[m
+[32m+[m[32m                "jquery",[m
+[32m+[m[32m                "mask",[m
+[32m+[m[32m                "plugins"[m
+[32m+[m[32m            ][m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "bower-asset/punycode",[m
+[32m+[m[32m            "version": "v1.3.2",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/bestiejs/punycode.js.git",[m
+[32m+[m[32m                "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/bestiejs/punycode.js/zipball/38c8d3131a82567bfef18da09f7f4db68c84f8a3",[m
+[32m+[m[32m                "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "type": "bower-asset-library",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "bower-asset-main": "punycode.js",[m
+[32m+[m[32m                "bower-asset-ignore": [[m
+[32m+[m[32m                    "coverage",[m
+[32m+[m[32m                    "tests",[m
+[32m+[m[32m                    ".*",[m
+[32m+[m[32m                    "component.json",[m
+[32m+[m[32m                    "Gruntfile.js",[m
+[32m+[m[32m                    "node_modules",[m
+[32m+[m[32m                    "package.json"[m
+[32m+[m[32m                ][m
+[32m+[m[32m            }[m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "bower-asset/yii2-pjax",[m
+[32m+[m[32m            "version": "v2.0.4",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/yiisoft/jquery-pjax.git",[m
+[32m+[m[32m                "reference": "3f20897307cca046fca5323b318475ae9dac0ca0"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/3f20897307cca046fca5323b318475ae9dac0ca0",[m
+[32m+[m[32m                "reference": "3f20897307cca046fca5323b318475ae9dac0ca0",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require": {[m
+[32m+[m[32m                "bower-asset/jquery": ">=1.8"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "type": "bower-asset-library",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "bower-asset-main": "./jquery.pjax.js",[m
+[32m+[m[32m                "bower-asset-ignore": [[m
+[32m+[m[32m                    ".travis.yml",[m
+[32m+[m[32m                    "Gemfile",[m
+[32m+[m[32m                    "Gemfile.lock",[m
+[32m+[m[32m                    "vendor/",[m
+[32m+[m[32m                    "script/",[m
+[32m+[m[32m                    "test/"[m
+[32m+[m[32m                ][m
+[32m+[m[32m            },[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "MIT"[m
+[32m+[m[32m            ][m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "cebe/markdown",[m
+[32m+[m[32m            "version": "1.1.0",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/cebe/markdown.git",[m
+[32m+[m[32m                "reference": "54a2c49de31cc44e864ebf0500a35ef21d0010b2"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/cebe/markdown/zipball/54a2c49de31cc44e864ebf0500a35ef21d0010b2",[m
+[32m+[m[32m                "reference": "54a2c49de31cc44e864ebf0500a35ef21d0010b2",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require": {[m
+[32m+[m[32m                "lib-pcre": "*",[m
+[32m+[m[32m                "php": ">=5.4.0"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require-dev": {[m
+[32m+[m[32m                "cebe/indent": "*",[m
+[32m+[m[32m                "facebook/xhprof": "*@dev",[m
+[32m+[m[32m                "phpunit/phpunit": "4.1.*"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "bin": [[m
+[32m+[m[32m                "bin/markdown"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "type": "library",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "branch-alias": {[m
+[32m+[m[32m                    "dev-master": "1.1.x-dev"[m
+[32m+[m[32m                }[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "autoload": {[m
+[32m+[m[32m                "psr-4": {[m
+[32m+[m[32m                    "cebe\\markdown\\": ""[m
+[32m+[m[32m                }[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "notification-url": "https://packagist.org/downloads/",[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "MIT"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "authors": [[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Carsten Brandt",[m
+[32m+[m[32m                    "email": "mail@cebe.cc",[m
+[32m+[m[32m                    "homepage": "http://cebe.cc/",[m
+[32m+[m[32m                    "role": "Creator"[m
+[32m+[m[32m                }[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "description": "A super fast, highly extensible markdown parser for PHP",[m
+[32m+[m[32m            "homepage": "https://github.com/cebe/markdown#readme",[m
+[32m+[m[32m            "keywords": [[m
+[32m+[m[32m                "extensible",[m
+[32m+[m[32m                "fast",[m
+[32m+[m[32m                "gfm",[m
+[32m+[m[32m                "markdown",[m
+[32m+[m[32m                "markdown-extra"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "time": "2015-03-06 05:28:07"[m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "ezyang/htmlpurifier",[m
+[32m+[m[32m            "version": "v4.6.0",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/ezyang/htmlpurifier.git",[m
+[32m+[m[32m                "reference": "6f389f0f25b90d0b495308efcfa073981177f0fd"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/6f389f0f25b90d0b495308efcfa073981177f0fd",[m
+[32m+[m[32m                "reference": "6f389f0f25b90d0b495308efcfa073981177f0fd",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require": {[m
+[32m+[m[32m                "php": ">=5.2"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "type": "library",[m
+[32m+[m[32m            "autoload": {[m
+[32m+[m[32m                "psr-0": {[m
+[32m+[m[32m                    "HTMLPurifier": "library/"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                "files": [[m
+[32m+[m[32m                    "library/HTMLPurifier.composer.php"[m
+[32m+[m[32m                ][m
+[32m+[m[32m            },[m
+[32m+[m[32m            "notification-url": "https://packagist.org/downloads/",[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "LGPL"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "authors": [[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Edward Z. Yang",[m
+[32m+[m[32m                    "email": "admin@htmlpurifier.org",[m
+[32m+[m[32m                    "homepage": "http://ezyang.com"[m
+[32m+[m[32m                }[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "description": "Standards compliant HTML filter written in PHP",[m
+[32m+[m[32m            "homepage": "http://htmlpurifier.org/",[m
+[32m+[m[32m            "keywords": [[m
+[32m+[m[32m                "html"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "time": "2013-11-30 08:25:19"[m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "swiftmailer/swiftmailer",[m
+[32m+[m[32m            "version": "v5.4.1",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/swiftmailer/swiftmailer.git",[m
+[32m+[m[32m                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",[m
+[32m+[m[32m                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require": {[m
+[32m+[m[32m                "php": ">=5.3.3"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require-dev": {[m
+[32m+[m[32m                "mockery/mockery": "~0.9.1,<0.9.4"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "type": "library",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "branch-alias": {[m
+[32m+[m[32m                    "dev-master": "5.4-dev"[m
+[32m+[m[32m                }[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "autoload": {[m
+[32m+[m[32m                "files": [[m
+[32m+[m[32m                    "lib/swift_required.php"[m
+[32m+[m[32m                ][m
+[32m+[m[32m            },[m
+[32m+[m[32m            "notification-url": "https://packagist.org/downloads/",[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "MIT"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "authors": [[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Chris Corbyn"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Fabien Potencier",[m
+[32m+[m[32m                    "email": "fabien@symfony.com"[m
+[32m+[m[32m                }[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "description": "Swiftmailer, free feature-rich PHP mailer",[m
+[32m+[m[32m            "homepage": "http://swiftmailer.org",[m
+[32m+[m[32m            "keywords": [[m
+[32m+[m[32m                "email",[m
+[32m+[m[32m                "mail",[m
+[32m+[m[32m                "mailer"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "time": "2015-06-06 14:19:39"[m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "yiisoft/yii2",[m
+[32m+[m[32m            "version": "2.0.6",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/yiisoft/yii2-framework.git",[m
+[32m+[m[32m                "reference": "f42b2eb80f61992438661b01d0d74c6738e2ff38"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/f42b2eb80f61992438661b01d0d74c6738e2ff38",[m
+[32m+[m[32m                "reference": "f42b2eb80f61992438661b01d0d74c6738e2ff38",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require": {[m
+[32m+[m[32m                "bower-asset/jquery": "2.1.*@stable | 1.11.*@stable",[m
+[32m+[m[32m                "bower-asset/jquery.inputmask": "3.1.*",[m
+[32m+[m[32m                "bower-asset/punycode": "1.3.*",[m
+[32m+[m[32m                "bower-asset/yii2-pjax": ">=2.0.1",[m
+[32m+[m[32m                "cebe/markdown": "~1.0.0 | ~1.1.0",[m
+[32m+[m[32m                "ext-mbstring": "*",[m
+[32m+[m[32m                "ezyang/htmlpurifier": "4.6.*",[m
+[32m+[m[32m                "lib-pcre": "*",[m
+[32m+[m[32m                "php": ">=5.4.0",[m
+[32m+[m[32m                "yiisoft/yii2-composer": "*"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "bin": [[m
+[32m+[m[32m                "yii"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "type": "library",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "branch-alias": {[m
+[32m+[m[32m                    "dev-master": "2.0.x-dev"[m
+[32m+[m[32m                }[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "autoload": {[m
+[32m+[m[32m                "psr-4": {[m
+[32m+[m[32m                    "yii\\": ""[m
+[32m+[m[32m                }[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "notification-url": "https://packagist.org/downloads/",[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "BSD-3-Clause"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "authors": [[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Qiang Xue",[m
+[32m+[m[32m                    "email": "qiang.xue@gmail.com",[m
+[32m+[m[32m                    "homepage": "http://www.yiiframework.com/",[m
+[32m+[m[32m                    "role": "Founder and project lead"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Alexander Makarov",[m
+[32m+[m[32m                    "email": "sam@rmcreative.ru",[m
+[32m+[m[32m                    "homepage": "http://rmcreative.ru/",[m
+[32m+[m[32m                    "role": "Core framework development"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Maurizio Domba",[m
+[32m+[m[32m                    "homepage": "http://mdomba.info/",[m
+[32m+[m[32m                    "role": "Core framework development"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Carsten Brandt",[m
+[32m+[m[32m                    "email": "mail@cebe.cc",[m
+[32m+[m[32m                    "homepage": "http://cebe.cc/",[m
+[32m+[m[32m                    "role": "Core framework development"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Timur Ruziev",[m
+[32m+[m[32m                    "email": "resurtm@gmail.com",[m
+[32m+[m[32m                    "homepage": "http://resurtm.com/",[m
+[32m+[m[32m                    "role": "Core framework development"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Paul Klimov",[m
+[32m+[m[32m                    "email": "klimov.paul@gmail.com",[m
+[32m+[m[32m                    "role": "Core framework development"[m
+[32m+[m[32m                }[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "description": "Yii PHP Framework Version 2",[m
+[32m+[m[32m            "homepage": "http://www.yiiframework.com/",[m
+[32m+[m[32m            "keywords": [[m
+[32m+[m[32m                "framework",[m
+[32m+[m[32m                "yii2"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "time": "2015-08-05 22:00:30"[m
+[32m+[m[32m        },[m
+[32m+[m[32m        {[m
+[32m+[m[32m            "name": "yiisoft/yii2-bootstrap",[m
+[32m+[m[32m            "version": "2.0.4",[m
+[32m+[m[32m            "source": {[m
+[32m+[m[32m                "type": "git",[m
+[32m+[m[32m                "url": "https://github.com/yiisoft/yii2-bootstrap.git",[m
+[32m+[m[32m                "reference": "1b6b1e61cf91c3cdd517d6a7e71d30bb212e4af0"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "dist": {[m
+[32m+[m[32m                "type": "zip",[m
+[32m+[m[32m                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/1b6b1e61cf91c3cdd517d6a7e71d30bb212e4af0",[m
+[32m+[m[32m                "reference": "1b6b1e61cf91c3cdd517d6a7e71d30bb212e4af0",[m
+[32m+[m[32m                "shasum": ""[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "require": {[m
+[32m+[m[32m                "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",[m
+[32m+[m[32m                "yiisoft/yii2": ">=2.0.4"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "type": "yii2-extension",[m
+[32m+[m[32m            "extra": {[m
+[32m+[m[32m                "branch-alias": {[m
+[32m+[m[32m                    "dev-master": "2.0.x-dev"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                "asset-installer-paths": {[m
+[32m+[m[32m                    "npm-asset-library": "vendor/npm",[m
+[32m+[m[32m                    "bower-asset-library": "vendor/bower"[m
+[32m+[m[32m                }[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "autoload": {[m
+[32m+[m[32m                "psr-4": {[m
+[32m+[m[32m                    "yii\\bootstrap\\": ""[m
+[32m+[m[32m                }[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "notification-url": "https://packagist.org/downloads/",[m
+[32m+[m[32m            "license": [[m
+[32m+[m[32m                "BSD-3-Clause"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "authors": [[m
+[32m+[m[32m                {[m
+[32m+[m[32m                    "name": "Qiang Xue",[m
+[32m+[m[32m                    "email": "
