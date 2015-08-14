@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblInventory */
 
-$this->title = 'Create Tbl Inventory';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Inventories', 'url' => ['index']];
+$this->title = 'Create Inventory Item ';
+$this->params['breadcrumbs'][] = ['label' => 'Inventory', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-inventory-create">
