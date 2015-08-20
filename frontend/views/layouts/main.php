@@ -36,8 +36,23 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
+        ['label' => 'Forms', 'url'=>'#', 
+        'items'=>[
+                    ['label'=>'Asset Loan', 'url' => '#'],
+                    ['label'=>'Asset Test', 'url' =>'#'],
+                    ['label'=>'Setup', 'url'=>'#']
+                   
+                ]
+        ],
+        ['label'=>'Assets/Inventory','url'=>'#','items'=>[ 
+                ['label'=>'Is Inventory', 'url'=>['/tbl-inventory/index']],
+                ['label'=>'Consumables', 'url'=>'#']
+                ]],
+       
+        ['label'=>'Change Password','url'=>['/site/resetPassword']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'About', 'url' => ['/site/about']],
+        
      
     ];
     if (Yii::$app->user->isGuest) {

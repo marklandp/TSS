@@ -36,7 +36,29 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label'=>'Inventory', 'url'=>['/tbl-inventory/index']],
+        ['label' => 'Forms', 'url'=>'#', 
+        'items'=>[
+                    ['label'=>'Asset Loan', 'url' => '#'],
+                    ['label'=>'Asset Test', 'url' =>'#'],
+                    ['label'=>'Setup', 'url'=>'#']
+                   
+                ]
+        ],
+        ['label'=>'Assets/Inventory','url'=>'#','items'=>[ 
+                ['label'=>'Is Inventory', 'url'=>['/tbl-inventory/index']],
+                ['label'=>'Consumables', 'url'=>'#']
+                ]],
+        ['label'=>'User Management','url'=>'#','items'=>[ 
+                ['label'=>'User', 'url'=>['/user/index']],
+                ]],
+        ['label'=>'Settings','url'=>'#','items'=>[ 
+                ['label'=>'Permissions Matrix', 'url'=>'#'],
+                ['label'=>'Asset Loan Settings', 'url'=>'#'],
+                ['label'=>'Classrooom Setup', 'url'=>'#'],
+                ['label'=>'Logs', 'url'=>'#'],
+                ['label'=>'Emails', 'url'=>'#'],
+                ]],
+        ['label'=>'Change Password','url'=>['/site/resetPassword']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
