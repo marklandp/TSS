@@ -58,7 +58,7 @@ AppAsset::register($this);
                 ['label'=>'Logs', 'url'=>'#'],
                 ['label'=>'Emails', 'url'=>'#'],
                 ]],
-        ['label'=>'Change Password','url'=>['/site/resetPassword']],
+        ['label'=>'Change Password','url'=>['#']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

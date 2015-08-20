@@ -89,3 +89,8 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #101010;
+    color:white;
+}

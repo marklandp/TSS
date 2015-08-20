@@ -49,7 +49,7 @@ AppAsset::register($this);
                 ['label'=>'Consumables', 'url'=>'#']
                 ]],
        
-        ['label'=>'Change Password','url'=>['/site/resetPassword']],
+        ['label'=>'Change Password','url'=>['#']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
         ['label' => 'About', 'url' => ['/site/about']],
         
