@@ -36,29 +36,30 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Forms', 'url'=>'#', 
+        ['label' => 'Forms', 'url'=>['/site/forms'], 
         'items'=>[
-                    ['label'=>'Asset Loan', 'url' => '#'],
-                    ['label'=>'Asset Test', 'url' =>'#'],
-                    ['label'=>'Setup', 'url'=>'#']
+                    ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
+                    ['label'=>'Asset Test', 'url' =>['/tbl-assest-test/index']],
+                    ['label'=>'Setup', 'url'=>['/tbl-classrooom-setup/index']],
                    
                 ]
         ],
-        ['label'=>'Assets/Inventory','url'=>'#','items'=>[ 
+        ['label'=>'Assets/Inventory','url'=>'#','items'=>[                
+                ['label'=>'Consumables', 'url'=>['#']],
                 ['label'=>'Is Inventory', 'url'=>['/tbl-inventory/index']],
-                ['label'=>'Consumables', 'url'=>'#']
                 ]],
         ['label'=>'User Management','url'=>'#','items'=>[ 
                 ['label'=>'User', 'url'=>['/user/index']],
                 ]],
         ['label'=>'Settings','url'=>'#','items'=>[ 
-                ['label'=>'Permissions Matrix', 'url'=>'#'],
                 ['label'=>'Asset Loan Settings', 'url'=>'#'],
                 ['label'=>'Classrooom Setup', 'url'=>'#'],
-                ['label'=>'Logs', 'url'=>'#'],
+                ['label'=>'Configurations', 'url'=>'#'],
                 ['label'=>'Emails', 'url'=>'#'],
+                ['label'=>'Logs', 'url'=>'#'],
+                ['label'=>'Permissions Matrix', 'url'=>'#'],
                 ]],
-        ['label'=>'Change Password','url'=>['#']],
+        ['label'=>'Change Password','url'=>['/site/request-password-reset']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

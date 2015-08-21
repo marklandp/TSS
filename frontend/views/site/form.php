@@ -2,12 +2,14 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Html;
+
 $this->title = 'TSS';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-         <h1>Welcome To TSS!</h1>
+         <h1>FORMS!</h1>
 
         <p class="lead">Mona School of Business and Management's Technical Support System.</p>
 

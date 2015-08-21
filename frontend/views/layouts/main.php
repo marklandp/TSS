@@ -36,17 +36,18 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Administration', 'url' => '#'],
         ['label' => 'Forms', 'url'=>'#', 
         'items'=>[
-                    ['label'=>'Asset Loan', 'url' => '#'],
-                    ['label'=>'Asset Test', 'url' =>'#'],
-                    ['label'=>'Setup', 'url'=>'#']
+                    ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
+                    ['label'=>'Asset Test', 'url' =>['/tbl-assest-test/index']],
+                    ['label'=>'Setup', 'url'=>['/tbl-classrooom-setup/index']],
                    
                 ]
         ],
         ['label'=>'Assets/Inventory','url'=>'#','items'=>[ 
-                ['label'=>'Is Inventory', 'url'=>['/tbl-inventory/index']],
-                ['label'=>'Consumables', 'url'=>'#']
+                ['label'=>'Consumables', 'url'=>'#'],
+                ['label'=>'Is Inventory', 'url'=>['/tbl-inventory/index']], 
                 ]],
        
         ['label'=>'Change Password','url'=>['#']],
