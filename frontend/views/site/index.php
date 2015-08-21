@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'TSS';
+$this->title = 'MSBM Technical Support System';
 ?>
 <div class="site-index">
 

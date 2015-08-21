@@ -42,8 +42,8 @@ class TblAssetLoan extends \yii\db\ActiveRecord
     {
         return [
             [['form_id', 'user_id', 'form_type', 'start_date', 'end_date', 'update_date', 'assigned_to', 'inventory', 'purpose', 'purpose_other', 'comments', 'external_user', 'expected_return', 'loan_date', 'status'], 'required'],
-            [['form_id', 'user_id', 'form_type', 'closed_by', 'assigned_to', 'external_user', 'expected_return', 'loan_date', 'status'], 'integer'],
-            [['start_date', 'end_date', 'update_date' ], 'date'],
+            [['form_id', 'user_id', 'form_type', 'closed_by', 'assigned_to', 'external_user', 'status'], 'integer'],
+            [['start_date', 'end_date', 'update_date','expected_return', 'loan_date', ], 'date'],
             [['purpose_other'], 'string'],
             [['inventory'], 'string', 'max' => 10],
             [['purpose'], 'string', 'max' => 30],
@@ -75,5 +75,12 @@ class TblAssetLoan extends \yii\db\ActiveRecord
             'loan_date' => 'Loan Date',
             'status' => 'Status',
         ];
+    }
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getExternalUser()
+    {
+        return $this ->hasOne(TblExternalUser::className(),['external_user'=>'external_user']);
     }
 }
