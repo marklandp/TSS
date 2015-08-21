@@ -210,4 +210,16 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+     /**
+     * Form about page.
+     *
+     * @return mixed
+     */
+    public function actionForm()
+    {
+        return $this->render('form');
+    }
+
+
 }
