@@ -211,8 +211,8 @@ class SiteController extends Controller
         ]);
     }
 
-     /**
-     * Form about page.
+    /**
+     * Form page.
      *
      * @return mixed
      */
@@ -220,6 +220,17 @@ class SiteController extends Controller
     {
         return $this->render('form');
     }
+
+    /**
+     * Asset page.
+     *
+     * @return mixed
+     */
+    public function actionAsset()
+    {
+        return $this->render('asset');
+    }
+
 
 
 }

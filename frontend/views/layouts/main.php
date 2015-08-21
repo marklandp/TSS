@@ -41,7 +41,7 @@ AppAsset::register($this);
         'items'=>[
                     ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
                     ['label'=>'Asset Test', 'url' =>['/tbl-assest-test/index']],
-                    ['label'=>'Setup', 'url'=>['/tbl-classrooom-setup/index']],
+                    ['label'=>'Setup', 'url'=>['/tbl-classroom-setup/index']],
                    
                 ]
         ],
@@ -51,8 +51,8 @@ AppAsset::register($this);
                 ]],
        
         ['label'=>'Change Password','url'=>['#']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-        ['label' => 'About', 'url' => ['/site/about']],
+       // ['label' => 'Contact', 'url' => ['/site/contact']],
+      //  ['label' => 'About', 'url' => ['/site/about']],
         
      
     ];
