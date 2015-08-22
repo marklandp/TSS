@@ -39,9 +39,12 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'purpose_other:ntext',
             // 'comments',
             //'external_user',
-            //'columns'=>array(
-               // 'header'=>' borrowed by',
-               // 'value'=> 'externalUser.first_name'->$a, 'externalUser.last_name'->$b, ),
+            //'$data->a.\' \'.$data->b.\' \'.$data
+            'columns'=>array(
+                'label'=>' Borrowed By',
+                'value'=> function (){
+                    return 'externalUser.first_name';
+                }),
             'externalUser.first_name',
             'externalUser.last_name',
              'expected_return:datetime',

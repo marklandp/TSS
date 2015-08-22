@@ -83,4 +83,5 @@ class TblAssetLoan extends \yii\db\ActiveRecord
     {
         return $this ->hasOne(TblExternalUser::className(),['external_user'=>'external_user']);
     }
+   
 }
