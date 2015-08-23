@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'columns'=>array(
                 'label'=>' Borrowed By',
                 'value'=> function (){
-                    return 'externalUser.first_name';
+                    return ' ';
                 }),
             'externalUser.first_name',
             'externalUser.last_name',

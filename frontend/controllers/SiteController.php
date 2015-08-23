@@ -222,7 +222,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Asset page.
+     * Asset Test page.
      *
      * @return mixed
      */
@@ -230,7 +230,5 @@ class SiteController extends Controller
     {
         return $this->render('asset');
     }
-
-
 
 }

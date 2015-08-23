@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestCableLock */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Cable Locks';
+$this->title = 'MSBM Technical Support System';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-cable-lock-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Test Cable Lock', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Test (Cable Lock)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
