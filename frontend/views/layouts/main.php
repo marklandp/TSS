@@ -36,7 +36,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Administration', 'url' => '#'],
+        ['label' => 'Administration', 'url' => Yii::$app->urlManagerBackend->createUrl('/TSS/backend/web/index')],
         ['label' => 'Forms', 'url'=>'#', 
         'items'=>[
                     ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],

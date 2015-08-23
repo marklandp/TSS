@@ -22,28 +22,31 @@ $this->params['breadcrumbs'][] = $this->title;
  
 <div class="body-content">
     <div class="btn-group btn-group-justified">
-<?= Html::a('Cable Lock', ['/tbl-asset-test-classroom/index'], ['class'=>'btn btn-primary']) ?>
-<?= Html::a('Classroom',['/tbl-asset-test-classroom/index'],['class'=>'btn btn-primary'])?>
-  <a href="/tbl-asset-test-clicker/index" class="btn btn-primary">Clicker</a>
-</div>
+    <?= Html::a('Cable Lock', ['/tbl-asset-test-classroom/index'], ['class'=>'btn btn-primary']) ?>
+    <?= Html::a('Classroom',['/tbl-asset-test-classroom/index'],['class'=>'btn btn-primary'])?>
+    <?= Html::a('Clicker',["/tbl-asset-test-clicker/index"],['class'=>'btn btn-primary'])?>
+    </div>
+
       <div class="btn-group btn-group-justified">
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Apple</button>
+        <?= Html::a('Ethernet',["/tbl-asset-test-ethernet/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a('Keyboard',["/tbl-asset-test-keyboard/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a('Laptop',["/tbl-asset-test-laptop/index"],['class'=>'btn btn-primary'])?>
       </div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Apple</button>
+      <div class="btn-group btn-group-justified">
+       <?= Html::a('Laptop Bag',["/tbl-asset-test-laptop-bag/index"],['class'=>'btn btn-primary'])?>
+       <?= Html::a('Mouse',["/tbl-asset-test-mouse/index"],['class'=>'btn btn-primary'])?>
+       <?= Html::a('Power Extension',["/tbl-asset-test-power-extension/index"],['class'=>'btn btn-primary'])?>
       </div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary btn-block">Apple</button>
-        <button type="button" class="btn btn-primary">Sony</button>
-        <button type="button" class="btn btn-primary">Apple</button>
+      <div class="btn-group btn-group-justified">
+        <?= Html::a('Power Strip',["/tbl-asset-test-power-strip/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a(' Projector',["/tbl-asset-test-projector/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a('Remote',["/tbl-asset-test-power-remote/index"],['class'=>'btn btn-primary'])?>
       </div>
-    
-</div>
+ 
+    <div class="btn-group btn-group-justified">
+        <?= Html::a('Power Strip',["/tbl-asset-test-speaker/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a(' Projector',["/tbl-asset-test-vga/index"],['class'=>'btn btn-primary'])?>
+       </div>
 
 </div>
 
