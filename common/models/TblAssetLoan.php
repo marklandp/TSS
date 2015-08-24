@@ -70,7 +70,7 @@ class TblAssetLoan extends \yii\db\ActiveRecord
             'purpose' => 'Purpose',
             'purpose_other' => 'Purpose Other',
             'comments' => 'Comments',
-            'external_user' => 'External User',
+            'external_user' => 'User',
             'expected_return' => 'Expected Return',
             'loan_date' => 'Loan Date',
             'status' => 'Status',
@@ -82,6 +82,21 @@ class TblAssetLoan extends \yii\db\ActiveRecord
     public function getExternalUser()
     {
         return $this ->hasOne(TblExternalUser::className(),['external_user'=>'external_user']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPurPose()
+    {
+        return $this ->hasOne(TblAssetLoanPurpose::className(),['id'=>'purpose']);
+    }
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUseR()
+    {
+        return $this ->hasOne(User::className(),['id'=>'user_id']);
     }
    
 }

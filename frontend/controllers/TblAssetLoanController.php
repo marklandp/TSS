@@ -62,7 +62,16 @@ class TblAssetLoanController extends Controller
     {
         $model = new TblAssetLoan();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            $model->user_id = Yii::$app->user->id;
+            $model->form_type = 1;
+            $model->start_date = date ('Y-m-d h:m:s');
+            $model->update_date = date ('Y-m-d h:m:s');
+            $model->loan_date = date ('Y-m-d h:m:s');
+
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->entry_id]);
         } else {
             return $this->render('create', [
