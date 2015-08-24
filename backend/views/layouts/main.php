@@ -54,7 +54,7 @@ AppAsset::register($this);
         ['label'=>'Settings','url'=>'#','items'=>[ 
                 ['label'=>'Asset Loan Settings', 'url'=>'#'],
                 ['label'=>'Classrooom Setup', 'url'=>'#'],
-                ['label'=>'Configurations', 'url'=>'#'],
+                ['label'=>'Configurations', 'url'=>['/site/confg']],
                 ['label'=>'Emails', 'url'=>'#'],
                 ['label'=>'Logs', 'url'=>'#'],
                 ['label'=>'Permissions Matrix', 'url'=>'#'],

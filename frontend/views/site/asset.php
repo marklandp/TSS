@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
  
 <div class="body-content">
     <div class="btn-group btn-group-justified">
-    <?= Html::a('Cable Lock', ['/tbl-asset-test-classroom/index'], ['class'=>'btn btn-primary']) ?>
+    <?= Html::a('Cable Lock', ['/tbl-asset-test-cable-lock/index'], ['class'=>'btn btn-primary']) ?>
     <?= Html::a('Classroom',['/tbl-asset-test-classroom/index'],['class'=>'btn btn-primary'])?>
     <?= Html::a('Clicker',["/tbl-asset-test-clicker/index"],['class'=>'btn btn-primary'])?>
     </div>
@@ -40,12 +40,12 @@ $this->params['breadcrumbs'][] = $this->title;
       <div class="btn-group btn-group-justified">
         <?= Html::a('Power Strip',["/tbl-asset-test-power-strip/index"],['class'=>'btn btn-primary'])?>
         <?= Html::a(' Projector',["/tbl-asset-test-projector/index"],['class'=>'btn btn-primary'])?>
-        <?= Html::a('Remote',["/tbl-asset-test-power-remote/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a('Remote',["/tbl-asset-test-remote/index"],['class'=>'btn btn-primary'])?>
       </div>
  
     <div class="btn-group btn-group-justified">
-        <?= Html::a('Power Strip',["/tbl-asset-test-speaker/index"],['class'=>'btn btn-primary'])?>
-        <?= Html::a(' Projector',["/tbl-asset-test-vga/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a('Speaker',["/tbl-asset-test-speaker/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a(' Vga',["/tbl-asset-test-vga/index"],['class'=>'btn btn-primary'])?>
        </div>
 
 </div>

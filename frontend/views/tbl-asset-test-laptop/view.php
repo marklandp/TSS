@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestLaptop */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Laptops', 'url' => ['index']];
+$this->title = "Asset Test Laptop #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Laptops', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-laptop-view">
@@ -49,8 +50,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'charger_laptop',
             'turn_off_sleep',
             'clean_laptop_monthly',
-            'date_created',
-            'update_date',
+            'date_created:datetime',
+            'update_date:datetime',
             'service_period',
             'status',
             'comment',

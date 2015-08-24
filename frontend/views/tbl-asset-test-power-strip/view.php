@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestPowerStrip */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Power Strips', 'url' => ['index']];
+$this->title = "Asset Test Power Strip #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Power Strips', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-power-strip-view">
@@ -34,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'check_power_indicator',
             'check_sockets',
             'length',
-            'created_date',
-            'update_date',
+            'created_date:datetime',
+            'update_date:datetime',
             'service_period',
             'status',
             'comment',

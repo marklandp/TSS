@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestEthernet */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Ethernets', 'url' => ['index']];
+$this->title = "Asset Test Ethernets #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Ethernets', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-ethernet-view">
@@ -34,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'check_connector_tag_side',
             'check_connector_far_side',
             'length',
-            'created_date',
-            'update_date',
+            'created_date:datetime',
+            'update_date:datetime',
             'service_period',
             'status',
             'comment',

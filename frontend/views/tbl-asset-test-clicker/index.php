@@ -7,7 +7,8 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestClicker */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Clickers';
+$this->title = 'Clickers';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-clicker-index">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Test Clicker', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Test Clicker', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'inventory_id',
             'test_previous_button',
             'test_next_button',
@@ -36,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'created_date',
             // 'update_date',
             // 'service_period',
-            // 'status',
+             'status',
             // 'comment',
 
             ['class' => 'yii\grid\ActionColumn'],

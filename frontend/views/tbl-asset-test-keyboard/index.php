@@ -7,7 +7,8 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestKeyboard */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Keyboards';
+$this->title = 'Keyboards';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-keyboard-index">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Test Keyboard', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Test (Keyboard)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -29,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'inventory_id',
             'type',
             'check_keys',
-            'created_date',
+            'created_date:datetime',
             // 'update_date',
             // 'service_period',
             // 'status',

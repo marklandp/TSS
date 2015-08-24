@@ -7,7 +7,8 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestEthernet */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Ethernets';
+$this->title = 'Ethernets';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-ethernet-index">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Test Ethernet', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Test (Ethernet)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,16 +26,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'inventory_id',
             'test_cable',
-            'check_connector_tag_side',
-            'check_connector_far_side',
+           // 'check_connector_tag_side',
+           // 'check_connector_far_side',
             // 'length',
             // 'created_date',
             // 'update_date',
             // 'service_period',
-            // 'status',
+             'status',
             // 'comment',
 
             ['class' => 'yii\grid\ActionColumn'],

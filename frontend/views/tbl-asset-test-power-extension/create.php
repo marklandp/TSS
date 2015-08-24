@@ -6,8 +6,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestPowerExtension */
 
-$this->title = 'Create Tbl Asset Test Power Extension';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Power Extensions', 'url' => ['index']];
+$this->title = 'Create Asset Test Power Extension';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => ' Power Extensions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-power-extension-create">

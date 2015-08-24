@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssestTest */
 
-$this->title = $model->form_id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Assest Tests', 'url' => ['index']];
+$this->title = "Assest Tests #" $model->form_id;
+$this->params['breadcrumbs'][] = ['label' => 'Assest Tests', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-assest-test-view">

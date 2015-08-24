@@ -22,9 +22,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'check_scroll_wheel')->textInput() ?>
 
-    <?= $form->field($model, 'created_date')->textInput() ?>
-
-    <?= $form->field($model, 'update_date')->textInput() ?>
+    <?= $form->field($model, 'created_date')->widget(\yii\jui\DatePicker::classname(), [
+    'language' => 'eng',
+    'dateFormat' => 'yyyy-MM-dd',
+]) ?>
+    <?= $form->field($model, 'update_date')->widget(\yii\jui\DatePicker::classname(), [
+    'language' => 'eng',
+    'dateFormat' => 'yyyy-MM-dd',
+]) ?>
 
     <?= $form->field($model, 'service_period')->textInput(['maxlength' => true]) ?>
 

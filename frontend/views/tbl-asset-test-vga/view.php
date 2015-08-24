@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestVga */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Vgas', 'url' => ['index']];
+$this->title = "Asset Test Vga #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => ' Vgas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-vga-view">
@@ -32,8 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'inventory_id',
             'test_cable',
             'length',
-            'created_date',
-            'update_date',
+            'created_date:datetime',
+            'update_date:datetime',
             'service_period',
             'status',
             'comment',

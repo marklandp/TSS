@@ -7,7 +7,8 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestCableLock */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'MSBM Technical Support System';
+$this->title = 'Cable Locks';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-cable-lock-index">
@@ -25,16 +26,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'inventory_id',
-            'check_keys',
-            'check_for_damage',
-            'check_keys_status',
+            //'check_keys',
+            //'check_for_damage',
+            //'check_keys_status',
             // 'check_for_damage_status',
-            // 'date_created',
-            // 'update_date',
+            // 'date_created:datetime',
+            // 'update_date:datetime',
             // 'service_period',
-            // 'status',
+             'status',
             // 'comment',
 
             ['class' => 'yii\grid\ActionColumn'],

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssestTest */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Assest Tests';
+$this->title = 'Assest Tests';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-assest-test-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Assest Test', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Assest Test', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

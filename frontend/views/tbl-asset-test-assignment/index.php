@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestAssignment */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Assignments';
+$this->title = ' Asset Test Assignments';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-assignment-index">
