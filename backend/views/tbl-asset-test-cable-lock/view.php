@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestCableLock */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Cable Locks', 'url' => ['index']];
+$this->title = 'Asset Test Cable Lock #'.$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Cable Locks', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-cable-lock-view">
@@ -34,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'check_for_damage',
             'check_keys_status',
             'check_for_damage_status',
-            'date_created',
-            'update_date',
+            'date_created:date',
+            'update_date:date',
             'service_period',
             'status',
             'comment',

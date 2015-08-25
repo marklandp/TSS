@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetLoanPurpose */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Loan Purposes', 'url' => ['index']];
+$this->title = "Asset Loan Purpose #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Loan Purposes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-loan-purpose-view">

@@ -5,9 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestCableLock */
 
-$this->title = 'Update Tbl Asset Test Cable Lock: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Cable Locks', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->title = 'Update Asset Test Cable Lock : ' . ' #' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Cable Locks', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test Cable Lock #'.$model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="tbl-asset-test-cable-lock-update">

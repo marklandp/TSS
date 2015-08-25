@@ -2,12 +2,13 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\TblAssetTestPeriods;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\SearchTblAssetTestPeriods */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Periods';
+$this->title = 'Asset Test Periods';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-periods-index">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Test Periods', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Test (Periods)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,8 +26,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'periods',
+            //'id',
+           // 'periods',
+
+             [ 'attribute'=>'perioD',
+             //'value' => function ($model){ 
+             //       return $model->getPerioD($model->periods);
+             //   },
+             'label'=>"Test Periods"],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

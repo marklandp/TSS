@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestMouse */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Mice', 'url' => ['index']];
+$this->title = " Asset Test Mouse #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Mice', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-mouse-view">
@@ -34,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'check_left_button',
             'check_right_button',
             'check_scroll_wheel',
-            'created_date',
-            'update_date',
+            'created_date:date',
+            'update_date:date',
             'service_period',
             'status',
             'comment',

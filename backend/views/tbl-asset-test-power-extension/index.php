@@ -7,7 +7,8 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestPowerExtension */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Power Extensions';
+$this->title = 'Power Extensions';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-power-extension-index">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Test Power Extension', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Test (Power Extension)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -29,8 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'inventory_id',
             'test_cable',
             'length',
-            'created_date',
-            // 'update_date',
+            'created_date:date',
+            // 'update_date:date',
             // 'service_period',
             // 'status',
             // 'comment',

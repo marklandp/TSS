@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestProjector */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Projectors', 'url' => ['index']];
+$this->title = "Asset Test Projector #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Projectors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-projector-view">
@@ -34,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'total_projector_bulb_life',
             'total_bulb_life_used',
             'total_bulb_life_remaining',
-            'created_date',
-            'update_date',
+            'created_date:date',
+            'update_date:date',
             'service_period',
             'status',
             'comment',

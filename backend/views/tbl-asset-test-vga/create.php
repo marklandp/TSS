@@ -6,8 +6,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestVga */
 
-$this->title = 'Create Tbl Asset Test Vga';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Vgas', 'url' => ['index']];
+$this->title = 'Create Asset Test Vga';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Vgas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-vga-create">

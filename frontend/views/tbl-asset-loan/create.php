@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetLoan */
 
-$this->title = 'Create Asset Loan';
+$this->title = 'Create ';
 $this->params['breadcrumbs'][] = ['label' => 'Asset Loans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

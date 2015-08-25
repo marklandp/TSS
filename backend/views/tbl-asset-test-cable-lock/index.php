@@ -7,7 +7,8 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestCableLock */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Cable Locks';
+$this->title = 'Cable Locks';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-cable-lock-index">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Test Cable Lock', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Test (Cable Lock)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,16 +26,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'inventory_id',
-            'check_keys',
-            'check_for_damage',
-            'check_keys_status',
+            //'check_keys',
+            //'check_for_damage',
+            //'check_keys_status',
             // 'check_for_damage_status',
-            // 'date_created',
-            // 'update_date',
+            // 'date_created:date',
+            // 'update_date:date',
             // 'service_period',
-            // 'status',
+             'status',
             // 'comment',
 
             ['class' => 'yii\grid\ActionColumn'],

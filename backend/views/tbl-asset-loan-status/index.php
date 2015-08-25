@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetLoanStatus */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Loan Statuses';
+$this->title = 'Asset Loans Status';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-loan-status-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Loan Status', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Loan (Status)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

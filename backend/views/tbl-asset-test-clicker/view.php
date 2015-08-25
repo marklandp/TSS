@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestClicker */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Clickers', 'url' => ['index']];
+$this->title = "Asset Test Clicker #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Clickers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-clicker-view">
@@ -36,8 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'test_battery_1',
             'test_battery_2',
             'battery_type:ntext',
-            'created_date',
-            'update_date',
+            'created_date:date',
+            'update_date:date',
             'service_period',
             'status',
             'comment',

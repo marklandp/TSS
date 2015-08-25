@@ -52,9 +52,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'clean_laptop_monthly')->textInput() ?>
 
-    <?= $form->field($model, 'date_created')->textInput() ?>
+    <?= $form->field($model, 'date_created')->widget(\yii\jui\DatePicker::classname(), [
+    'language' => 'eng',
+    'dateFormat' => 'yyyy-MM-dd',
+]) ?>
 
-    <?= $form->field($model, 'update_date')->textInput() ?>
+    <?= $form->field($model, 'update_date')->widget(\yii\jui\DatePicker::classname(), [
+    'language' => 'eng',
+    'dateFormat' => 'yyyy-MM-dd',
+]) ?>
 
     <?= $form->field($model, 'service_period')->textInput(['maxlength' => true]) ?>
 

@@ -7,7 +7,8 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblAssetTestLaptopBag */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Asset Test Laptop Bags';
+$this->title = 'Laptop Bags';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-laptop-bag-index">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Asset Test Laptop Bag', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Asset Test (Laptop Bag)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -30,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'empty_bag',
             'test_strap',
             'clean_bag_monthly',
-            // 'created_date',
-            // 'update_date',
+            // 'created_date:date',
+            // 'update_date:date',
             // 'service_period',
             // 'status',
             // 'comment',

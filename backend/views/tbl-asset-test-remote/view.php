@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestRemote */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Remotes', 'url' => ['index']];
+$this->title = "Asset Test Remote #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Remotes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-remote-view">
@@ -40,8 +41,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'up_elt_mount_remote',
             'down_elt_mount_remote',
             'stop_elt_mount_remote',
-            'created_date',
-            'update_date',
+            'created_date:date',
+            'update_date:date',
             'service_period',
             'status',
             'comment',

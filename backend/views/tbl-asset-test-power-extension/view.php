@@ -6,8 +6,9 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestPowerExtension */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Power Extensions', 'url' => ['index']];
+$this->title = "Asset Test Power Extension #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Power Extensions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-power-extension-view">
@@ -32,8 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'inventory_id',
             'test_cable',
             'length',
-            'created_date',
-            'update_date',
+            'created_date:date',
+            'update_date:date',
             'service_period',
             'status',
             'comment',

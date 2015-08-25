@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetLoan */
 
-$this->title = $model->entry_id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Loans', 'url' => ['index']];
+$this->title = "View Asset Loan #".$model->entry_id;
+$this->params['breadcrumbs'][] = ['label' => 'Asset Loans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-loan-view">
@@ -28,22 +28,25 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'entry_id',
-            'form_id',
+           // 'entry_id',
+           // 'form_id',
             'user_id',
-            'form_type',
+            'useR.username',
+          //  'form_type',
             'closed_by',
-            'start_date',
-            'end_date',
-            'update_date',
+          //  'start_date:datetime',
+          //  'end_date:datetime',
+            'update_date:date',
             'assigned_to',
             'inventory',
-            'purpose',
+            //'purpose',
+            'purPose.purpose',
             'purpose_other:ntext',
             'comments',
-            'external_user',
+            'externalUser.first_name',
+            'externalUser.last_name',
             'expected_return',
-            'loan_date',
+            'loan_date:date',
             'status',
         ],
     ]) ?>

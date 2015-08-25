@@ -40,7 +40,7 @@ AppAsset::register($this);
         'items'=>[
                     ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
                     ['label'=>'Asset Test', 'url' =>['/tbl-assest-test/index']],
-                    ['label'=>'Setup', 'url'=>['/tbl-classrooom-setup/index']],
+                    ['label'=>'Setup', 'url'=>['/tbl-classroom-setup/index']],
                    
                 ]
         ],

@@ -6,8 +6,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestPowerStrip */
 
-$this->title = 'Create Tbl Asset Test Power Strip';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Power Strips', 'url' => ['index']];
+$this->title = 'Create Asset Test Power Strip';
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test ', 'url' => ['/site/asset']];
+$this->params['breadcrumbs'][] = ['label' => 'Power Strips', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-power-strip-create">

@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestRemote */
 
-$this->title = 'Update Tbl Asset Test Remote: ' . ' ' . $model->id;
+$this->title = 'Update Asset Test Remote : ' . ' #' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Remotes', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => "Asset Test Remote #".$model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="tbl-asset-test-remote-update">
