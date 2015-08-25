@@ -36,7 +36,15 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Administration', 'url' => Yii::$app->urlManagerBackend->createUrl('/TSS/backend/web/index')],
+       
+    ];
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+    } else {
+    	$menuItems = [
+    	['label' => 'Home', 'url' => ['/site/index']],
+    	['label' => 'Administration', 'url' => Yii::$app->urlManagerBackend->createUrl('/TSS/backend/web/index')],
         ['label' => 'Forms', 'url'=>'#', 
         'items'=>[
                     ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
@@ -54,13 +62,11 @@ AppAsset::register($this);
        // ['label' => 'Contact', 'url' => ['/site/contact']],
       //  ['label' => 'About', 'url' => ['/site/about']],
         
+        
      
     ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
         $menuItems[] = [
+	
          'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],
             'linkOptions' => ['data-method' => 'post'],
