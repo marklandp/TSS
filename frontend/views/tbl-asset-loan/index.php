@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\TblAssetLoan;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\SearchTblAssetLoan */
@@ -44,8 +45,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'columns'=>array(
                 'label'=>' Borrowed By',
                 'value'=> function (){
-                    return ' ';
+                    return'';
                 }),
+            //['attribute'=>'borrwedBy',
+            //'label'=> 'Borrowed By'],
             'externalUser.first_name',
             'externalUser.last_name',
              'expected_return:date',

@@ -53,4 +53,5 @@ class TblExternalUser extends \yii\db\ActiveRecord
             'email' => 'Email',
         ];
     }
+
 }

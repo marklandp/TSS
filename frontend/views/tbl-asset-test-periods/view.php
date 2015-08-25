@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblAssetTestPeriods */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Asset Test Periods', 'url' => ['index']];
+$this->title = $model->getPerioD();
+$this->params['breadcrumbs'][] = ['label' => 'Asset Test Periods', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-test-periods-view">
@@ -30,6 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'periods',
+            [ 'attribute'=>'perioD',
+             'label'=>"Test Periods"],
         ],
     ]) ?>
 

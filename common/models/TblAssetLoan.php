@@ -91,12 +91,25 @@ class TblAssetLoan extends \yii\db\ActiveRecord
     {
         return $this ->hasOne(TblAssetLoanPurpose::className(),['id'=>'purpose']);
     }
+   
     /**
      * @return \yii\db\ActiveQuery
      */
     public function getUseR()
     {
         return $this ->hasOne(User::className(),['id'=>'user_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBorrwedBy()
+    {
+        $first = $this->getExternalUser()->asArray()->all();
+       // echo $first('first_name');
+        
+        
+        return $first;//$first;//":";$this ->hasOne(User::className(),['id'=>'user_id']);
     }
    
 }

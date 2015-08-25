@@ -47,11 +47,9 @@ class TblAssetTestPeriods extends \yii\db\ActiveRecord
      */
     public function getPerioD()
     {
-        $period = explode ('_', $this->periods);
-        $start_date = explode('-',$period[0]);
-        $start = implode('',$start_date);
-        $end_date = explode('-',$period[1]);
-        $end = implode('',$end_date);
-        return date('F j, Y',$start).'-'.date('F j, Y',$end) ;
+        $period = explode ('_', $this->periods); 
+        $start = strtotime($period[0]);
+        $end = strtotime($period[1]);
+        return date('F jS, Y',$start).' - '.date('F jS, Y',$end) ;
     }
 }

@@ -18,17 +18,19 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-index">
 	<div class="jumbotron">
          <h1>Asset Test</h1>
+<?= Html::a('Test Period',["/tbl-asset-test-periods/index"],['class'=>'btn btn-primary btn-block'])?>
+
  </div>
  
 <div class="body-content">
     <div class="btn-group btn-group-justified">
-    <?= Html::a('Cable Lock', ['/tbl-asset-test-cable-lock/index'], ['class'=>'btn btn-primary']) ?>
-    <?= Html::a('Classroom',['/tbl-asset-test-classroom/index'],['class'=>'btn btn-primary'])?>
-    <?= Html::a('Clicker',["/tbl-asset-test-clicker/index"],['class'=>'btn btn-primary'])?>
+    <?= Html::a('<span class="glyphicon glyphicon-minus"></span> Cable Lock', ['/tbl-asset-test-cable-lock/index'], ['class'=>'btn btn-primary']) ?>
+    <?= Html::a('<span class="glyphicon glyphicon-minus"></span> Classroom',['/tbl-asset-test-classroom/index'],['class'=>'btn btn-primary'])?>
+    <?= Html::a('<span class="glyphicon glyphicon-minus"></span> Clicker',["/tbl-asset-test-clicker/index"],['class'=>'btn btn-primary'])?>
     </div>
 
       <div class="btn-group btn-group-justified">
-        <?= Html::a('Ethernet',["/tbl-asset-test-ethernet/index"],['class'=>'btn btn-primary'])?>
+        <?= Html::a('<span class="glyphicon glyphicon-ok"></span> Ethernet',["/tbl-asset-test-ethernet/index"],['class'=>'btn btn-primary'])?>
         <?= Html::a('Keyboard',["/tbl-asset-test-keyboard/index"],['class'=>'btn btn-primary'])?>
         <?= Html::a('Laptop',["/tbl-asset-test-laptop/index"],['class'=>'btn btn-primary'])?>
       </div>
