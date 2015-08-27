@@ -35,7 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'date_created:date',
             // 'update_date:date',
             // 'service_period',
-             'status',
+             ['value'=>'statuS.status_name',
+             'label'=>'status'],
             // 'comment',
 
             ['class' => 'yii\grid\ActionColumn'],
