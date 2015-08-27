@@ -61,7 +61,7 @@ class TblAssetLoanController extends Controller
     public function actionCreate()
     {
         $model = new TblAssetLoan();
-
+        $status = array('3'=>'On Loan', '4'=>'Over Due', '5'=>'Missing');
         if ($model->load(Yii::$app->request->post()) ) {
 
             $model->user_id = Yii::$app->user->id;
@@ -76,6 +76,7 @@ class TblAssetLoanController extends Controller
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'status' =>$status,
             ]);
         }
     }

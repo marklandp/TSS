@@ -62,7 +62,8 @@ use common\models\TblAssetLoanPurpose;
     'dateFormat' => 'yyyy-MM-dd',
 ]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <?= $form->field($model, 'status')->dropDownList(
+    ['3' => 'On Loan', '4' => 'Over Due', '5' => 'Missing'])?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

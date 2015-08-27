@@ -70,7 +70,7 @@ class TblAssetLoan extends \yii\db\ActiveRecord
             'purpose' => 'Purpose',
             'purpose_other' => 'Purpose Other',
             'comments' => 'Comments',
-            'external_user' => 'User',
+            'external_user' => 'User Name',
             'expected_return' => 'Expected Return',
             'loan_date' => 'Loan Date',
             'status' => 'Status',
@@ -105,11 +105,23 @@ class TblAssetLoan extends \yii\db\ActiveRecord
      */
     public function getBorrwedBy()
     {
-        $first = $this->getExternalUser()->asArray()->all();
+        $first = $this->getExternalUser()->asArray()->all()[0]['first_name'];
+        $last = $this->getExternalUser()->asArray()->all()[0]['last_name'];
+        return $first . ' '. $last;
+        
        // echo $first('first_name');
         
         
         return $first;//$first;//":";$this ->hasOne(User::className(),['id'=>'user_id']);
+    }
+
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatuS()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
     }
    
 }

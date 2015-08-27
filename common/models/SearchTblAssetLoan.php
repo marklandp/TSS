@@ -45,6 +45,10 @@ class SearchTblAssetLoan extends TblAssetLoan
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort' => [
+            'defaultOrder'=>[
+                'entry_id'=> SORT_DESC,]
+                ],
         ]);
 
         $this->load($params);

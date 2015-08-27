@@ -43,11 +43,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'purPose.purpose',
             'purpose_other:ntext',
             'comments',
-            'externalUser.first_name',
-            'externalUser.last_name',
-            'expected_return',
+            ['attribute'=>'borrwedBy',
+            'label'=> 'Borrowed By'],
+            'expected_return:date',
             'loan_date:date',
-            'status',
+           ['attribute'=>'statuS.status_name',
+           'label'=> 'Status'],
         ],
     ]) ?>
 
