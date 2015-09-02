@@ -41,7 +41,7 @@ class TblAssetLoan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['form_id', 'user_id', 'form_type', 'start_date', 'end_date', 'update_date', 'assigned_to', 'inventory', 'purpose', 'purpose_other', 'comments', 'external_user', 'expected_return', 'loan_date', 'status'], 'required'],
+            [[ 'assigned_to', 'inventory', 'purpose', 'external_user', 'expected_return', 'loan_date'], 'required'],
             [['form_id', 'user_id', 'form_type', 'closed_by', 'assigned_to', 'external_user', 'status'], 'integer'],
             [['start_date', 'end_date', 'update_date','expected_return', 'loan_date', ], 'date'],
             [['purpose_other'], 'string'],
@@ -66,13 +66,13 @@ class TblAssetLoan extends \yii\db\ActiveRecord
             'end_date' => 'End Date',
             'update_date' => 'Update Date',
             'assigned_to' => 'Assigned To',
-            'inventory' => 'Inventory',
-            'purpose' => 'Purpose',
+            'inventory' => 'Inventory *',
+            'purpose' => 'Purpose *',
             'purpose_other' => 'Purpose Other',
             'comments' => 'Comments',
             'external_user' => 'User Name',
-            'expected_return' => 'Expected Return',
-            'loan_date' => 'Loan Date',
+            'expected_return' => 'Expected Return *',
+            'loan_date' => 'Loan Date *',
             'status' => 'Status',
         ];
     }

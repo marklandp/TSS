@@ -18,8 +18,9 @@ use common\models\TblAssetLoanPurpose;
 
     <!--?= $form->field($model, 'user_id')->textInput() ?-->
 
-    <?= $form->field($model, 'form_type')->textInput() ?>
+    <!--?= $form->field($model, 'form_type')->textInput() ?-->
 
+    <?= $form->field($model, 'external_user')->textInput() ?>
 
     <?= $form->field($external, 'id_number')->textInput() ?>
 
@@ -27,29 +28,29 @@ use common\models\TblAssetLoanPurpose;
 
     <?= $form->field($external, 'last_name')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($external, 'status')->textInput() ?>
+    <!--?= $form->field($external, 'status')->textInput() ?-->
 
     <?= $form->field($external, 'phone_number')->textInput() ?>
 
     <?= $form->field($external, 'email')->textInput(['maxlength' => true]) ?>
 
 
-    <?= $form->field($model, 'closed_by')->textInput() ?>
+    <!--?= $form->field($model, 'closed_by')->textInput() ?-->
 
-    <?= $form->field($model, 'start_date')->widget(\yii\jui\DatePicker::classname(), [
+    <!--?= $form->field($model, 'start_date')->widget(\yii\jui\DatePicker::classname(), [
     'language' => 'eng',
     'dateFormat' => 'yyyy-MM-dd',
-]) ?>
+]) ?-->
 
-    <?= $form->field($model, 'end_date')->widget(\yii\jui\DatePicker::classname(), [
+    <!--?= $form->field($model, 'end_date')->widget(\yii\jui\DatePicker::classname(), [
     'language' => 'eng',
     'dateFormat' => 'yyyy-MM-dd',
-]) ?>
+]) ?-->
 
-    <?= $form->field($model, 'update_date')->widget(\yii\jui\DatePicker::classname(), [
+    <!--?= $form->field($model, 'update_date')->widget(\yii\jui\DatePicker::classname(), [
     'language' => 'eng',
     'dateFormat' => 'yyyy-MM-dd',
-]) ?>
+]) ?-->
 
     <?= $form->field($model, 'assigned_to')->textInput() ?>
 
@@ -63,8 +64,6 @@ use common\models\TblAssetLoanPurpose;
     <?= $form->field($model, 'purpose_other')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'comments')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'external_user')->textInput() ?>
 
     <?= $form->field($model, 'expected_return')->widget(\yii\jui\DatePicker::classname(), [
     'language' => 'eng',
