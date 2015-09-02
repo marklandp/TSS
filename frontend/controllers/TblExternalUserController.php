@@ -3,17 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\TblAssetLoan;
 use common\models\TblExternalUser;
-use common\models\SearchTblAssetLoan;
+use common\models\SearchTblExternalUser;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * TblAssetLoanController implements the CRUD actions for TblAssetLoan model.
+ * TblExternalUserController implements the CRUD actions for TblExternalUser model.
  */
-class TblAssetLoanController extends Controller
+class TblExternalUserController extends Controller
 {
     public function behaviors()
     {
@@ -28,12 +27,12 @@ class TblAssetLoanController extends Controller
     }
 
     /**
-     * Lists all TblAssetLoan models.
+     * Lists all TblExternalUser models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new SearchTblAssetLoan();
+        $searchModel = new SearchTblExternalUser();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -43,7 +42,7 @@ class TblAssetLoanController extends Controller
     }
 
     /**
-     * Displays a single TblAssetLoan model.
+     * Displays a single TblExternalUser model.
      * @param integer $id
      * @return mixed
      */
@@ -55,41 +54,27 @@ class TblAssetLoanController extends Controller
     }
 
     /**
-     * Creates a new TblAssetLoan model.
+     * Creates a new TblExternalUser model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new TblAssetLoan();
-        $external = new TblExternalUser();
+        $model = new TblExternalUser();
 
-        if ($model->load(Yii::$app->request->post()) && $external->load(Yii::$app->request->post())) {
-
-            $model->user_id = Yii::$app->user->id;
-            $model->form_type = 1;
-            $model->start_date = date ('Y-m-d h:m:s');
-            $model->update_date = date ('Y-m-d h:m:s');
-            $model->loan_date = date ('Y-m-d h:m:s');
-            $model->status = 3;
+        if ($model->load(Yii::$app->request->post())) {
+            $model->status = 0;
             $model->save();
-
-
-            if ($external->first_name != ''){
-            	$external->save();
-            }
-
-            return $this->redirect(['view', 'id' => $model->entry_id]);
+            return $this->redirect(['view', 'id' => $model->external_user]);
         } else {
             return $this->render('create', [
                 'model' => $model,
-                'external'=>$external,
             ]);
         }
     }
 
     /**
-     * Updates an existing TblAssetLoan model.
+     * Updates an existing TblExternalUser model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -99,7 +84,7 @@ class TblAssetLoanController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->entry_id]);
+            return $this->redirect(['view', 'id' => $model->external_user]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -108,7 +93,7 @@ class TblAssetLoanController extends Controller
     }
 
     /**
-     * Deletes an existing TblAssetLoan model.
+     * Deletes an existing TblExternalUser model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -121,15 +106,15 @@ class TblAssetLoanController extends Controller
     }
 
     /**
-     * Finds the TblAssetLoan model based on its primary key value.
+     * Finds the TblExternalUser model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return TblAssetLoan the loaded model
+     * @return TblExternalUser the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = TblAssetLoan::findOne($id)) !== null) {
+        if (($model = TblExternalUser::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
