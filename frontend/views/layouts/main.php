@@ -20,6 +20,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel="shortcut icon" href= <?php echo '"'.Yii::$app->request->baseUrl.'/favicon.ico"' ?> type="image/x-icon" />
     <?php $this->head() ?>
 </head>
 <body>
@@ -28,7 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Technical Support System ',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -36,17 +37,42 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+       
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+    	$menuItems = [
+    	['label' => 'Home', 'url' => ['/site/index']],
+    	['label' => 'Administration', 'url' => Yii::$app->urlManagerBackend->createUrl('/TSS/backend/web/index')],
+        ['label' => 'Forms', 'url'=>'#', 
+        'items'=>[
+                    ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
+                    ['label'=>'Asset Test', 'url' =>['/site/asset']],
+                    ['label'=>'Setup', 'url'=>['/tbl-classroom-setup/index']],
+                   
+                ]
+        ],
+        ['label'=>'Assets/Inventory','url'=>'#','items'=>[ 
+                ['label'=>'Consumables', 'url'=>'#'],
+                ['label'=>'Is Inventory', 'url'=>['/tbl-inventory/index']], 
+                ]],
+       
+        ['label'=>'Change Password','url'=>['#']],
+       // ['label' => 'Contact', 'url' => ['/site/contact']],
+      //  ['label' => 'About', 'url' => ['/site/about']],
+        
+        
+     
+    ];
         $menuItems[] = [
-            'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+	
+         'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],
-            'linkOptions' => ['data-method' => 'post']
+            'linkOptions' => ['data-method' => 'post'],
+
+
         ];
     }
     echo Nav::widget([
@@ -67,7 +93,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; MSBM <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

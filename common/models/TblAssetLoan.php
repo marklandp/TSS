@@ -41,8 +41,9 @@ class TblAssetLoan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['form_id', 'user_id', 'form_type', 'start_date', 'end_date', 'update_date', 'assigned_to', 'inventory', 'purpose', 'purpose_other', 'comments', 'external_user', 'expected_return', 'loan_date', 'status'], 'required'],
-            [['form_id', 'user_id', 'form_type', 'closed_by', 'start_date', 'end_date', 'update_date', 'assigned_to', 'external_user', 'expected_return', 'loan_date', 'status'], 'integer'],
+            [[ 'assigned_to', 'inventory', 'purpose', 'external_user', 'expected_return', 'loan_date'], 'required'],
+            [['form_id', 'user_id', 'form_type', 'closed_by', 'assigned_to', 'external_user', 'status'], 'integer'],
+            [['start_date', 'end_date', 'update_date','expected_return', 'loan_date', ], 'date'],
             [['purpose_other'], 'string'],
             [['inventory'], 'string', 'max' => 10],
             [['purpose'], 'string', 'max' => 30],
@@ -65,14 +66,62 @@ class TblAssetLoan extends \yii\db\ActiveRecord
             'end_date' => 'End Date',
             'update_date' => 'Update Date',
             'assigned_to' => 'Assigned To',
-            'inventory' => 'Inventory',
-            'purpose' => 'Purpose',
+            'inventory' => 'Inventory *',
+            'purpose' => 'Purpose *',
             'purpose_other' => 'Purpose Other',
             'comments' => 'Comments',
-            'external_user' => 'External User',
-            'expected_return' => 'Expected Return',
-            'loan_date' => 'Loan Date',
+            'external_user' => 'User Name',
+            'expected_return' => 'Expected Return *',
+            'loan_date' => 'Loan Date *',
             'status' => 'Status',
         ];
     }
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getExternalUser()
+    {
+        return $this ->hasOne(TblExternalUser::className(),['external_user'=>'external_user']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPurPose()
+    {
+        return $this ->hasOne(TblAssetLoanPurpose::className(),['id'=>'purpose']);
+    }
+   
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUseR()
+    {
+        return $this ->hasOne(User::className(),['id'=>'user_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBorrwedBy()
+    {
+        $first = $this->getExternalUser()->asArray()->all()[0]['first_name'];
+        $last = $this->getExternalUser()->asArray()->all()[0]['last_name'];
+        return $first . ' '. $last;
+        
+       // echo $first('first_name');
+        
+        
+        return $first;//$first;//":";$this ->hasOne(User::className(),['id'=>'user_id']);
+    }
+
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatuS()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+   
 }

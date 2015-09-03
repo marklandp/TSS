@@ -210,4 +210,26 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    /**
+     * Form page.
+     *
+     * @return mixed
+     */
+    public function actionForm()
+    {
+        return $this->render('form');
+    }
+
+    /**
+     * Asset Test page.
+     *
+     * @return mixed
+     */
+    public function actionAsset()
+    {
+        return $this->render('asset');
+    }
+
+    
 }

@@ -20,6 +20,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel="shortcut icon" href= <?php echo '"'.Yii::$app->request->baseUrl.'/images/favicon.ico"' ?> type="image/x-icon" />
     <?php $this->head() ?>
 </head>
 <body>
@@ -28,7 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Technical Support System',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -36,6 +37,30 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Forms', 'url'=>['/site/forms'], 
+        'items'=>[
+                    ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
+                    ['label'=>'Asset Test', 'url' =>['/tbl-assest-test/index']],
+                    ['label'=>'Setup', 'url'=>['/tbl-classroom-setup/index']],
+                   
+                ]
+        ],
+        ['label'=>'Assets/Inventory','url'=>'#','items'=>[                
+                ['label'=>'Consumables', 'url'=>['/tbl-inventory-consumables/index']],
+                ['label'=>'Is Inventory', 'url'=>['/tbl-inventory/index']],
+                ]],
+        ['label'=>'User Management','url'=>'#','items'=>[ 
+                ['label'=>'User', 'url'=>['/user/index']],
+                ]],
+        ['label'=>'Settings','url'=>'#','items'=>[ 
+                ['label'=>'Asset Loan Settings', 'url'=>'#'],
+                ['label'=>'Classrooom Setup', 'url'=>'#'],
+                ['label'=>'Configurations', 'url'=>['/site/confg']],
+                ['label'=>'Emails', 'url'=>'#'],
+                ['label'=>'Logs', 'url'=>'#'],
+                ['label'=>'Permissions Matrix', 'url'=>'#'],
+                ]],
+        ['label'=>'Change Password','url'=>['/site/request-password-reset']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -64,7 +89,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; MSBM <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

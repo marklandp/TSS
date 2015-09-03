@@ -30,6 +30,11 @@ class SiteController extends Controller
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                    [
+                        'actions'=>['confg'],
+                        'allow'=>true,
+                        'roles'=>['@'],
+                        ],
                 ],
             ],
             'verbs' => [
@@ -79,5 +84,14 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    /**
+     * Configurations Page
+     * @return mixed
+     */
+    public function actionConfg()
+    {
+        return $this->render('confg');
     }
 }

@@ -61,4 +61,30 @@ class TblAssetTestCableLock extends \yii\db\ActiveRecord
             'comment' => 'Comment',
         ];
     }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getKeyStatus()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'check_keys']);
+    }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDamageStatus()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'check_for_damage']);
+    }
+
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatuS()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+   
 }

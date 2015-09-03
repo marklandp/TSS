@@ -41,4 +41,15 @@ class TblAssetTestPeriods extends \yii\db\ActiveRecord
             'periods' => 'Periods',
         ];
     }
+
+    /**
+     * @return String
+     */
+    public function getPerioD()
+    {
+        $period = explode ('_', $this->periods); 
+        $start = strtotime($period[0]);
+        $end = strtotime($period[1]);
+        return date('F jS, Y',$start).' - '.date('F jS, Y',$end) ;
+    }
 }
