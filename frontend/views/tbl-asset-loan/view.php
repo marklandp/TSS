@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
            // 'form_id',
             'user_id',
             'useR.username',
+            'external_user',
           //  'form_type',
             'closed_by',
           //  'start_date:datetime',

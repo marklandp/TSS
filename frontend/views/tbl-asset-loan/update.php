@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = 'Update';
     <p> Fields with * are required </p>
     <?= $this->render('_form', [
         'model' => $model,
+        'external'=>$external,
     ]) ?>
 
 </div>

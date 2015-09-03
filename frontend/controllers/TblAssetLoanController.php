@@ -6,6 +6,7 @@ use Yii;
 use common\models\TblAssetLoan;
 use common\models\TblExternalUser;
 use common\models\SearchTblAssetLoan;
+use common\models\SearchTblExternalUser;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -97,12 +98,16 @@ class TblAssetLoanController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
+       	
+        $user = $model->external_user;
+        $external = TblExternalUser::find()->where(['external_user'=>$user])->one();
+       
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->entry_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'external' => $external,
             ]);
         }
     }

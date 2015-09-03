@@ -20,13 +20,13 @@ use common\models\TblAssetLoanPurpose;
 
     <!--?= $form->field($model, 'form_type')->textInput() ?-->
 
-    <?= $form->field($model, 'external_user')->textInput() ?>
+    <?= $form->field($model, 'external_user')->textInput(['style'=>'width:30%;']) ?>
 
-    <?= $form->field($external, 'id_number')->textInput() ?>
+    <?= $form->field($external, 'id_number')->textInput(['style'=>'width:30%;']) ?>
 
-    <?= $form->field($external, 'first_name')->textarea(['rows' => 6]) ?>
+    <?= $form->field($external, 'first_name')->textarea(['rows' => 1, 'style'=>'width:30%;']) ?>
 
-    <?= $form->field($external, 'last_name')->textarea(['rows' => 6]) ?>
+    <?= $form->field($external, 'last_name')->textarea(['rows' => 1, 'style'=>'width:30%;']) ?>
 
     <!--?= $form->field($external, 'status')->textInput() ?-->
 
