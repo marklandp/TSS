@@ -40,7 +40,7 @@ AppAsset::register($this);
         ['label' => 'Forms', 'url'=>['/site/forms'], 
         'items'=>[
                     ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
-                    ['label'=>'Asset Test', 'url' =>['/tbl-assest-test/index']],
+                    ['label'=>'Asset Test', 'url' =>['/site/asset']],
                     ['label'=>'Setup', 'url'=>['/tbl-classroom-setup/index']],
                    
                 ]
@@ -89,8 +89,8 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; MSBM <?= date('Y') ?></p>
-
+        <p class="pull-left">&copy; MSBM <?= date('Y') ?>     &nbsp;
+        <a href=<?= Yii::$app->urlManagerFrontend->createUrl('/TSS/frontend/web/index')?> > Basic </a> </p>
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>

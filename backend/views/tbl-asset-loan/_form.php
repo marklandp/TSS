@@ -18,24 +18,39 @@ use common\models\TblAssetLoanPurpose;
 
     <!--?= $form->field($model, 'user_id')->textInput() ?-->
 
-    <?= $form->field($model, 'form_type')->textInput() ?>
+    <!--?= $form->field($model, 'form_type')->textInput() ?-->
 
-    <?= $form->field($model, 'closed_by')->textInput() ?>
+    <?= $form->field($model, 'external_user')->textInput(['style'=>'width:30%;']) ?>
 
-    <?= $form->field($model, 'start_date')->widget(\yii\jui\DatePicker::classname(), [
+    <?= $form->field($external, 'id_number')->textInput(['style'=>'width:30%;']) ?>
+
+    <?= $form->field($external, 'first_name')->textarea(['rows' => 1, 'style'=>'width:30%;']) ?>
+
+    <?= $form->field($external, 'last_name')->textarea(['rows' => 1, 'style'=>'width:30%;']) ?>
+
+    <!--?= $form->field($external, 'status')->textInput() ?-->
+
+    <?= $form->field($external, 'phone_number')->textInput() ?>
+
+    <?= $form->field($external, 'email')->textInput(['maxlength' => true]) ?>
+
+
+    <!--?= $form->field($model, 'closed_by')->textInput() ?-->
+
+    <!--?= $form->field($model, 'start_date')->widget(\yii\jui\DatePicker::classname(), [
     'language' => 'eng',
     'dateFormat' => 'yyyy-MM-dd',
-]) ?>
+]) ?-->
 
-    <?= $form->field($model, 'end_date')->widget(\yii\jui\DatePicker::classname(), [
+    <!--?= $form->field($model, 'end_date')->widget(\yii\jui\DatePicker::classname(), [
     'language' => 'eng',
     'dateFormat' => 'yyyy-MM-dd',
-]) ?>
+]) ?-->
 
-    <?= $form->field($model, 'update_date')->widget(\yii\jui\DatePicker::classname(), [
+    <!--?= $form->field($model, 'update_date')->widget(\yii\jui\DatePicker::classname(), [
     'language' => 'eng',
     'dateFormat' => 'yyyy-MM-dd',
-]) ?>
+]) ?-->
 
     <?= $form->field($model, 'assigned_to')->textInput() ?>
 
@@ -50,8 +65,6 @@ use common\models\TblAssetLoanPurpose;
 
     <?= $form->field($model, 'comments')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'external_user')->textInput() ?>
-
     <?= $form->field($model, 'expected_return')->widget(\yii\jui\DatePicker::classname(), [
     'language' => 'eng',
     'dateFormat' => 'yyyy-MM-dd',
@@ -62,7 +75,7 @@ use common\models\TblAssetLoanPurpose;
     'dateFormat' => 'yyyy-MM-dd',
 ]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <!--?= $form->field($model, 'status')->dropDownList(['3' => 'On Loan', '4' => 'Over Due', '5' => 'Missing'])?-->
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

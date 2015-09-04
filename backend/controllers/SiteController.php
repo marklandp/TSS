@@ -35,6 +35,11 @@ class SiteController extends Controller
                         'allow'=>true,
                         'roles'=>['@'],
                         ],
+                        [
+                        'actions'=>['asset'],
+                        'allow'=>true,
+                        'roles'=>['@'],
+                        ],
                 ],
             ],
             'verbs' => [
@@ -94,4 +99,15 @@ class SiteController extends Controller
     {
         return $this->render('confg');
     }
+
+
+     /**
+     * Configurations Page
+     * @return mixed
+     */
+    public function actionAsset()
+    {
+        return $this->render('asset');
+    }
+
 }
