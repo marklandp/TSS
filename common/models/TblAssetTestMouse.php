@@ -61,4 +61,36 @@ class TblAssetTestMouse extends \yii\db\ActiveRecord
             'comment' => 'Comment',
         ];
     }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatuS()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+    /**
+     *
+     * used to associate inventory ID to asset tags
+     */
+    public function getTagName()
+    {
+       return $this->hasOne(TblIsInventory::classname(),['form_id'=>'inventory_id']);
+    }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getLeftBtn()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'check_left_button']);
+    }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRightBtn()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'check_right_button']);
+    }
 }

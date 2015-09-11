@@ -86,5 +86,13 @@ class TblAssetTestCableLock extends \yii\db\ActiveRecord
     {
        return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
     }
+    /**
+     *
+     * used to associate inventory ID to asset tags
+     */
+    public function getTagName()
+    {
+       return $this->hasOne(TblIsInventory::classname(),['form_id'=>'inventory_id']);
+    }
    
 }

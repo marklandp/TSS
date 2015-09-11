@@ -28,6 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //'id',
             'inventory_id',
+            ['value'=>'tagName.tag',
+             'label'=>'Tag'],
             //'check_keys',
             //'check_for_damage',
             //'check_keys_status',
@@ -37,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'service_period',
              ['value'=>'statuS.status_name',
              'label'=>'status'],
-            // 'comment',
+             'comment',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

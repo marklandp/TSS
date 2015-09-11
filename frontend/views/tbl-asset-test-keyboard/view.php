@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'type',
             'check_keys',
             'created_date:date',
-            'update_date:datet',
+            'update_date:date',
             'service_period',
             'status',
             'comment',
