@@ -21,6 +21,7 @@ $this->title = 'MSBM Technical Support System';
         <div class="row">
             <div class="col-lg-8">
                 <h2  style="background-color:#101010; padding:3px; color:white;">Classrooms</h2>
+    
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip

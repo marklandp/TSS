@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblIsInventory */
 
-$this->title = $model->form_id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Is Inventories', 'url' => ['index']];
+$this->title = "I.S Inventory #".$model->form_id;
+$this->params['breadcrumbs'][] = ['label' => 'I.S Inventories', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-is-inventory-view">
@@ -33,10 +33,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'type',
             'tag',
             'closed_by',
-            'start_date',
-            'end_date',
+            'start_date:date',
+            'end_date:date',
             'assigned_to',
-            'last_date_serviced',
+            'last_date_serviced:date',
             'status',
             'inventory',
             'purpose',
