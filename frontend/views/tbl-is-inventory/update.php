@@ -8,7 +8,7 @@ use yii\helpers\Html;
 $this->title = 'Update I.S Inventory : ' . ' #' . $model->form_id;
 $this->params['breadcrumbs'][] = ['label' => 'I.S Inventories', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => "I.S Inventory #".$model->form_id, 'url' => ['view', 'id' => $model->form_id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Update '."I.S Inventory #".$model->form_id;
 ?>
 <div class="tbl-is-inventory-update">
 
