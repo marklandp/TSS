@@ -6,8 +6,10 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblExternalUser */
 
-$this->title = $model->external_user;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl External Users', 'url' => ['index']];
+$this->title = 'External Users: #'.$model->external_user;
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
+$this->params['breadcrumbs'][] = ['label' => 'External Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-external-user-view">

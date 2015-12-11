@@ -8,6 +8,8 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Asset Loan Purposes';
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-asset-loan-purpose-index">

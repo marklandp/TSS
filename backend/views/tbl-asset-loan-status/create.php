@@ -7,6 +7,8 @@ use yii\helpers\Html;
 /* @var $model common\models\TblAssetLoanStatus */
 
 $this->title = 'Create ';
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
 $this->params['breadcrumbs'][] = ['label' => 'Asset Loan Statuses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

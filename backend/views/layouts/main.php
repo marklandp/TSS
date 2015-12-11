@@ -56,8 +56,8 @@ AppAsset::register($this);
                 ['label'=>'Classrooom Setup', 'url'=>'#'],
                 ['label'=>'Configurations', 'url'=>['/site/confg']],
                 ['label'=>'Emails', 'url'=>['/tbl-email-list/index']],
-                ['label'=>'Logs', 'url'=>'#'],
-                ['label'=>'Permissions Matrix', 'url'=>['/permissions/index']],
+                ['label'=>'Logs', 'url'=>['/active-record-log/index']],
+                ['label'=>'Permissions Matrix', 'url'=>['/permission/index']],
                 ]],
         ['label'=>'Change Password','url'=>['/site/request-password-reset']],
     ];

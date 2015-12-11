@@ -7,7 +7,9 @@ use yii\widgets\DetailView;
 /* @var $model common\models\TblBuildings */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Buildings', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
+$this->params['breadcrumbs'][] = ['label' => 'Buildings', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-buildings-view">

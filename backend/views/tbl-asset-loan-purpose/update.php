@@ -6,8 +6,10 @@ use yii\helpers\Html;
 /* @var $model common\models\TblAssetLoanPurpose */
 
 $this->title = 'Update Asset Loan Purpose : ' . ' #' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
 $this->params['breadcrumbs'][] = ['label' => 'Asset Loan Purposes', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => 'Asset Loan Purpose #'.$model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="tbl-asset-loan-purpose-update">

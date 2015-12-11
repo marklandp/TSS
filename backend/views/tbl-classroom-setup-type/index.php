@@ -7,7 +7,9 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblClassroomSetupType */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Classroom Setup Types';
+$this->title = 'Classroom Setup Types';
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-classroom-setup-type-index">
@@ -16,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Classroom Setup Type', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create (Classroom Setup Type)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

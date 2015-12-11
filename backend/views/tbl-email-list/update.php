@@ -5,9 +5,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblEmailList */
 
-$this->title = 'Update Tbl Email List: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Email Lists', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->title = 'Email #' . ' ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
+$this->params['breadcrumbs'][] = ['label' => 'Email Lists', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Email #'.$model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="tbl-email-list-update">

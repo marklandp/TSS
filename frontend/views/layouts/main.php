@@ -55,7 +55,7 @@ AppAsset::register($this);
                 ]
         ],
         ['label'=>'Assets/Inventory','url'=>'#','items'=>[ 
-                ['label'=>'Consumables', 'url'=>'#'],//['/tbl-inventory-consumables/index']],
+                ['label'=>'Consumables', 'url'=>['/tbl-inventory-consumables/index']],
                 ['label'=>'Is Inventory', 'url'=>['/tbl-is-inventory/index']], 
                 ]],
        
