@@ -53,7 +53,7 @@ AppAsset::register($this);
                 ['label'=>'User', 'url'=>['/user/index']],
                 ]],
         ['label'=>'Settings','url'=>'#','items'=>[ 
-                ['label'=>'Classrooom Setup', 'url'=>'#'],
+                ['label'=>'Classrooom Setup', 'url'=>['/tbl-classroom/index']],
                 ['label'=>'Configurations', 'url'=>['/site/confg']],
                 ['label'=>'Emails', 'url'=>['/tbl-email-list/index']],
                 ['label'=>'Logs', 'url'=>['/active-record-log/index']],
