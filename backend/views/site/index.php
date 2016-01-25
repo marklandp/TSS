@@ -1,7 +1,11 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\widgets\ListView;
+use common\models\TblClassroomSetup;
+use common\models\TblAssetLoan;
 $this->title = 'MSBM Technical Support System';
 ?>
 <div class="site-index">
@@ -27,8 +31,13 @@ $this->title = 'MSBM Technical Support System';
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href=" ">Go to Setups &raquo;</a></p>
+                    <?= ListView::widget([
+                    'dataProvider' => $dataProvider,
+                    'itemView'=>'_classitem',
+                 
+                ]); ?>
+                <br>
+                <p><?= Html::a('Go to Setups &raquo;', ['/tbl-classroom-setup/index'] , ['class'=>'btn btn-default'])?>
             </div>
             <div class="col-lg-4">
                 <h2  style="background-color:#101010; padding:3px; color:white;">Asset Tests</h2>
@@ -47,8 +56,13 @@ $this->title = 'MSBM Technical Support System';
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href=" ">Go to Asset Loans &raquo;</a></p>
+                 <?= ListView::widget([
+                    'dataProvider' => $dataProvider1,
+                    'itemView'=>'_loanitem',
+                 
+                ]); ?>       
+                <br>
+                <p><?= Html::a('Go to Asset Loans &raquo;', ['/tbl-asset-loan/index'] , ['class'=>'btn btn-default'])?>
             </div>
             
         </div>

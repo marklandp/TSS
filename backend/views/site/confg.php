@@ -20,6 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= Html::a('External User Information',['/tbl-external-user/index'],['class'=>'btn btn-primary']) ?> 
     <?= Html::a('Roles',['/role/index'], ['class'=>'btn btn-primary']) ?>
     <?= Html::a('Buildings',['/tbl-buildings/index'], ['class'=>'btn btn-primary']) ?>
+     <?= Html::a('Statuses',['/tbl-statuses/index'],['class'=>'btn btn-primary'])?>
     </div>
 
 
