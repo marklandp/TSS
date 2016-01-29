@@ -6,7 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
 
-$this->title = $model->id;
+$this->title = "Update User #".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'User Management'];
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -34,10 +35,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'lastname',
             'auth_key',
             'password_hash',
-            'password_reset_token',
-            'created_at',
-            'updated_at',
-            'lastvisit',
+            //'password_reset_token',
+            'created_at:date',
+            'updated_at:date',
+            'lastvisit:date',
             'lastaction',
             'lastpasswordchange',
             'superuser',

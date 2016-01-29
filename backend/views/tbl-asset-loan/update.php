@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = 'Update Asset Loan : ' . ' #' . $model->entry_id;
 $this->params['breadcrumbs'][] = ['label' => ' Asset Loans', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->entry_id, 'url' => ['view', 'id' => $model->entry_id]];
+$this->params['breadcrumbs'][] = ['label' => 'Asset Loan #'.$model->entry_id, 'url' => ['view', 'id' => $model->entry_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="tbl-asset-loan-update">
@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = 'Update';
     <p> Fields with * are required </p>
     <?= $this->render('_form', [
         'model' => $model,
+        'external'=>$external,
     ]) ?>
 
 </div>

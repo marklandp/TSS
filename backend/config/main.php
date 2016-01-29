@@ -29,6 +29,13 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'urlManagerFrontend'=>[
+            'class' => 'yii\web\urlManager',
+            'suffix'=>'.php',
+            'baseUrl' => '/',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ],
         
     ],
     'params' => $params,

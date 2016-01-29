@@ -18,8 +18,8 @@ class SearchTblClassroomSetup extends TblClassroomSetup
     public function rules()
     {
         return [
-            [['form_id', 'user_id', 'form_type', 'setup_type', 'closed_by', 'assigned_to', 'classroom', 'status'], 'integer'],
-            [['setup_other', 'start_date', 'end_date', 'update_date', 'inventory', 'comments', 'classroom_other', 'course_code', 'setup_time', 'pickup_time', 'scheduled_start_time', 'scheduled_end_time'], 'safe'],
+            [['form_id', 'user_id', 'form_type', 'setup_type', 'closed_by', 'assigned_to'], 'integer'],
+            [['setup_other', 'start_date', 'end_date', 'update_date', 'inventory', 'comments', 'classroom_other', 'course_code', 'setup_time', 'pickup_time', 'scheduled_start_time', 'scheduled_end_time', 'status', 'classroom'], 'safe'],
         ];
     }
 
@@ -54,6 +54,8 @@ class SearchTblClassroomSetup extends TblClassroomSetup
             // $query->where('0=1');
             return $dataProvider;
         }
+        $query->joinWith('statuS');
+        $query->joinWith('classroom');
 
         $query->andFilterWhere([
             'form_id' => $this->form_id,
@@ -65,19 +67,21 @@ class SearchTblClassroomSetup extends TblClassroomSetup
             'end_date' => $this->end_date,
             'update_date' => $this->update_date,
             'assigned_to' => $this->assigned_to,
-            'classroom' => $this->classroom,
+            //'classroom' => $this->classroom,
             'setup_time' => $this->setup_time,
             'pickup_time' => $this->pickup_time,
             'scheduled_start_time' => $this->scheduled_start_time,
             'scheduled_end_time' => $this->scheduled_end_time,
-            'status' => $this->status,
+            //'status' => $this->status,
         ]);
 
         $query->andFilterWhere(['like', 'setup_other', $this->setup_other])
             ->andFilterWhere(['like', 'inventory', $this->inventory])
             ->andFilterWhere(['like', 'comments', $this->comments])
             ->andFilterWhere(['like', 'classroom_other', $this->classroom_other])
-            ->andFilterWhere(['like', 'course_code', $this->course_code]);
+            ->andFilterWhere(['like', 'course_code', $this->course_code])
+			->andFilterWhere(['like','tbl_statuses.status_name',$this->status])
+            ->andFilterWhere(['like','tbl_classroom.classroom_name',$this->classroom]);
 
         return $dataProvider;
     }

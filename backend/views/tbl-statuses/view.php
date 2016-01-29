@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblStatuses */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Statuses', 'url' => ['index']];
+$this->title = 'Status #'.$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Statuses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-statuses-view">

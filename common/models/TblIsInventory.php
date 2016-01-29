@@ -67,4 +67,13 @@ class TblIsInventory extends \yii\db\ActiveRecord
             'comments' => 'Comments',
         ];
     }
+
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatuS()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
 }

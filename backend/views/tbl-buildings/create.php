@@ -6,8 +6,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblBuildings */
 
-$this->title = 'Create Tbl Buildings';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Buildings', 'url' => ['index']];
+$this->title = 'Create Buildings';
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
+$this->params['breadcrumbs'][] = ['label' => 'Buildings', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-buildings-create">

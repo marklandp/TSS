@@ -112,7 +112,7 @@ class TblAssetLoan extends \yii\db\ActiveRecord
        // echo $first('first_name');
         
         
-        return $first;//$first;//":";$this ->hasOne(User::className(),['id'=>'user_id']);
+        //return $first;//$first;//":";$this ->hasOne(User::className(),['id'=>'user_id']);
     }
 
     /**
