@@ -62,7 +62,9 @@ class TblExternalUserController extends Controller
     {
         $model = new TblExternalUser();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->status = 0;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->external_user]);
         } else {
             return $this->render('create', [

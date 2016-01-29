@@ -4,7 +4,9 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\TblAssetLoan;
+use common\models\TblExternalUser;
 use common\models\SearchTblAssetLoan;
+use common\models\SearchTblExternalUser;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -61,12 +63,28 @@ class TblAssetLoanController extends Controller
     public function actionCreate()
     {
         $model = new TblAssetLoan();
+        $external = new TblExternalUser();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $external->load(Yii::$app->request->post())) {
+
+            $model->user_id = Yii::$app->user->id;
+            $model->form_type = 1;
+            $model->start_date = date ('Y-m-d h:m:s');
+            $model->update_date = date ('Y-m-d h:m:s');
+            $model->loan_date = date ('Y-m-d h:m:s');
+            $model->status = 3;
+            $model->save();
+
+
+            if ($external->first_name != ''){
+            	$external->save();
+            }
+
             return $this->redirect(['view', 'id' => $model->entry_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'external'=>$external,
             ]);
         }
     }
@@ -80,12 +98,16 @@ class TblAssetLoanController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
+       	
+        $user = $model->external_user;
+        $external = TblExternalUser::find()->where(['external_user'=>$user])->one();
+       
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->entry_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'external' => $external,
             ]);
         }
     }

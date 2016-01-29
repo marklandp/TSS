@@ -7,7 +7,9 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblBuildings */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Buildings';
+$this->title = 'Buildings';
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-buildings-index">
@@ -16,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Buildings', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create (Building)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
