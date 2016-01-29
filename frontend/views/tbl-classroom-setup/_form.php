@@ -4,7 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use common\models\TblClassroom;
-use common\models\TblCourses;;
+use common\models\TblCourses;
+use kartik\time\TimePicker;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\TblClassroomSetup */
@@ -60,18 +61,14 @@ use common\models\TblCourses;;
             ['prompt'=>'Select Course']
             )?>
 
-    <?= $form->field($model, 'setup_time')->widget(\yii\jui\DatePicker::classname(),[
-    'language'=>'eng',
-    'dateFormat'=>'yyyy-MM-dd']) ?>
-    <?= $form->field($model, 'pickup_time')->textInput() ?>
+    <?= $form->field($model, 'setup_time')->widget(TimePicker::classname(), []);?>
+    <?= $form->field($model, 'pickup_time')->widget(TimePicker::classname(), []);?>
 
-    <?= $form->field($model, 'scheduled_start_time')->widget(\yii\jui\DatePicker::classname(),[
-    'language'=>'eng',
-    'dateFormat'=>'yyyy-MM-dd']) ?>
+    <?= $form->field($model, 'scheduled_start_time')->widget(TimePicker::classname(), []);
+   ?>
 
-    <?= $form->field($model, 'scheduled_end_time')->widget(\yii\jui\DatePicker::classname(),[
-    'language'=>'eng',
-    'dateFormat'=>'yyyy-MM-dd']) ?>
+    <?= $form->field($model, 'scheduled_end_time')->widget(TimePicker::classname(), []);
+   ?>
 
     <?= $form->field($model, 'status')->textInput() ?>
 
