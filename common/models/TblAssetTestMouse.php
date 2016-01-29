@@ -93,4 +93,12 @@ class TblAssetTestMouse extends \yii\db\ActiveRecord
     {
        return $this->hasOne(TblStatuses::classname(),['id'=>'check_right_button']);
     }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getcheckWheel()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
 }

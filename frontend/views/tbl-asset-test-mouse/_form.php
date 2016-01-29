@@ -14,7 +14,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'inventory_id')->textInput() ?>
 
-    <?= $form->field($model, 'type')->textInput() ?>
+    <!--?= $form->field($model, 'type')->textInput() ?-->
+    <?= $form->field($model, 'type')->dropDownList(['0' => 'USB', '1' => 'PS/2'])?>
 
     <?= $form->field($model, 'check_left_button')->textInput() ?>
 

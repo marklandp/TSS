@@ -29,7 +29,7 @@ return [
             'errorAction' => 'site/error',
         ],
 
-        'urlManagerBackend'=>[
+       'urlManagerBackend'=>[
             'class' => 'yii\web\urlManager',
             'suffix'=>'.php',
             'baseUrl' => '/',

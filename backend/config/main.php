@@ -30,6 +30,14 @@ return [
             'errorAction' => 'site/error',
         ],
         
+       /* 'urlManagerBackend'=>[
+            'class' => 'yii\web\urlManager',
+            'suffix'=>'.php',
+            'baseUrl' => '/',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ],*/
+        
     ],
     'params' => $params,
 ];

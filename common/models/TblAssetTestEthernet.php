@@ -77,4 +77,20 @@ class TblAssetTestEthernet extends \yii\db\ActiveRecord
     {
        return $this->hasOne(TblIsInventory::classname(),['form_id'=>'inventory_id']);
     }
+    /**
+     *
+     * used to associate inventory ID to asset tags
+     */
+    public function getconnectorTag()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'check_connector_tag_side']);
+    }
+    /**
+     *
+     * used to associate inventory ID to asset tags
+     */
+    public function getconnectorFar()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'check_connector_far_side']);
+    }
 }

@@ -77,4 +77,93 @@ class TblAssetTestClassroom extends \yii\db\ActiveRecord
             'comment' => 'Comment',
         ];
     }
+     /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatuS()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+    /**
+     *
+     * used to associate inventory ID to asset tags
+     */
+    public function getTagName()
+    {
+       return $this->hasOne(TblClassroom::classname(),['id'=>'inventory_id']);
+    }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getelecSocket()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getvgaSocket()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getavPorts()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+     /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getetherNet1()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+     /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getetherNet2()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+     /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getretractScreen()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+     /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getretractProjector()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+     /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getprojectOr()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+     /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getprojectorAlign()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+     
 }

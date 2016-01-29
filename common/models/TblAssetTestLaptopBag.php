@@ -59,4 +59,41 @@ class TblAssetTestLaptopBag extends \yii\db\ActiveRecord
             'comment' => 'Comment',
         ];
     }
+    /**
+     *
+     * used to associate inventory ID to asset tags
+     */
+    public function getTagName()
+    {
+       return $this->hasOne(TblIsInventory::classname(),['form_id'=>'inventory_id']);
+    }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatuS()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }/**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getemptyBag()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }/**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function gettestStrap()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }/**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getcleanBag()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
 }

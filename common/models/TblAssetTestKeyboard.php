@@ -73,4 +73,13 @@ class TblAssetTestKeyboard extends \yii\db\ActiveRecord
     {
        return $this->hasOne(TblIsInventory::classname(),['form_id'=>'inventory_id']);
     }
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getcheckKeys()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+    
 }
