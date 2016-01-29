@@ -81,7 +81,9 @@ class TblClassroomSetupController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->status=3
+            $model->save();
             return $this->redirect(['view', 'id' => $model->form_id]);
         } else {
             return $this->render('update', [
