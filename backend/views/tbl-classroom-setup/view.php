@@ -6,8 +6,10 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblClassroomSetup */
 
-$this->title = $model->form_id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Classroom Setups', 'url' => ['index']];
+$this->title = 'Classroom Setup #'.$model->form_id;
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
+$this->params['breadcrumbs'][] = ['label' => 'Classroom Setups', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-classroom-setup-view">

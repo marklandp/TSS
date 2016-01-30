@@ -5,9 +5,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblClassroomSetup */
 
-$this->title = 'Update Tbl Classroom Setup: ' . ' ' . $model->form_id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Classroom Setups', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->form_id, 'url' => ['view', 'id' => $model->form_id]];
+$this->title = 'Update Classroom Setup: #' . ' ' . $model->form_id;
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
+$this->params['breadcrumbs'][] = ['label' => 'Classroom Setups', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Classroom Setup #'.$model->form_id, 'url' => ['view', 'id' => $model->form_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="tbl-classroom-setup-update">

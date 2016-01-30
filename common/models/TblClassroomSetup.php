@@ -1,7 +1,7 @@
 <?php
 
 namespace common\models;
-
+use common\models\TblClassroom;
 use Yii;
 
 /**
@@ -81,4 +81,34 @@ class TblClassroomSetup extends \yii\db\ActiveRecord
             'status' => 'Status',
         ];
     }
+
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getClassroom()
+    {
+       return $this->hasOne(TblClassroom::classname(),['id'=>'classroom']);
+    }
+
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getClassroomName()
+    {
+        $name = $this->getClassroom()->asArray()->all()[0]['classroom_name'];
+       return $name;
+    }
+    
+    /**
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatuS()
+    {
+       return $this->hasOne(TblStatuses::classname(),['id'=>'status']);
+    }
+   
+
 }

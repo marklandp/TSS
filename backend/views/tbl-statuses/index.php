@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblStatuses */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Statuses';
+$this->title = 'Statuses';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-statuses-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Statuses', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Status', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

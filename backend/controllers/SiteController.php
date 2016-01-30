@@ -6,6 +6,10 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
+use common\models\TblClassroomSetup;
+use common\models\SearchTblClassroomSetup;
+use common\models\TblAssetLoan;
+use common\models\SearchTblAssetLoan;
 
 /**
  * Site controller
@@ -35,6 +39,11 @@ class SiteController extends Controller
                         'allow'=>true,
                         'roles'=>['@'],
                         ],
+                        [
+                        'actions'=>['asset'],
+                        'allow'=>true,
+                        'roles'=>['@'],
+                        ],
                 ],
             ],
             'verbs' => [
@@ -60,7 +69,15 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new SearchTblClassroomSetup();
+        $searchModel1 = new SearchTblAssetLoan();
+        $dataProvider = $searchModel->search(['SearchTblClassroomSetup'=>['status'=>'open']]);
+        $dataProvider1 = $searchModel1->search(['SearchTblAssetLoan'=>['status'=>'open']]);
+
+        $model = new TblClassroomSetup();
+        $model1 = new TblAssetLoan();
+        return $this->render('index', ['searchModel'=>$searchModel, 'dataProvider'=>$dataProvider, 'model'=>$model
+            ,'searchModel1'=>$searchModel1, 'dataProvider1'=>$dataProvider1,'model1'=>$model1]);
     }
 
     public function actionLogin()
@@ -94,4 +111,15 @@ class SiteController extends Controller
     {
         return $this->render('confg');
     }
+
+
+     /**
+     * Configurations Page
+     * @return mixed
+     */
+    public function actionAsset()
+    {
+        return $this->render('asset');
+    }
+
 }
