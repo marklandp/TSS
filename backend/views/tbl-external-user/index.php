@@ -7,7 +7,9 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\SearchTblExternalUser */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl External Users';
+$this->title = 'External Users';
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-external-user-index">
@@ -16,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl External User', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create (External User)', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

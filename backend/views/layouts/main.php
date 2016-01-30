@@ -40,7 +40,7 @@ AppAsset::register($this);
         ['label' => 'Forms', 'url'=>['/site/forms'], 
         'items'=>[
                     ['label'=>'Asset Loan', 'url' => ['/tbl-asset-loan/index']],
-                    ['label'=>'Asset Test', 'url' =>['/tbl-assest-test/index']],
+                    ['label'=>'Asset Test', 'url' =>['/site/asset']],
                     ['label'=>'Setup', 'url'=>['/tbl-classroom-setup/index']],
                 ]
         ],
@@ -52,12 +52,11 @@ AppAsset::register($this);
                 ['label'=>'User', 'url'=>['/user/index']],
                 ]],
         ['label'=>'Settings','url'=>'#','items'=>[ 
-                ['label'=>'Asset Loan Settings', 'url'=>'#'],
-                ['label'=>'Classrooom Setup', 'url'=>'#'],
+                ['label'=>'Classrooom Setup', 'url'=>['/tbl-classroom/index']],
                 ['label'=>'Configurations', 'url'=>['/site/confg']],
-                ['label'=>'Emails', 'url'=>'#'],
-                ['label'=>'Logs', 'url'=>'#'],
-                ['label'=>'Permissions Matrix', 'url'=>'#'],
+                ['label'=>'Emails', 'url'=>['/tbl-email-list/index']],
+                ['label'=>'Logs', 'url'=>['/active-record-log/index']],
+                ['label'=>'Permissions Matrix', 'url'=>['/permission/index']],
                 ]],
         ['label'=>'Change Password','url'=>['/site/request-password-reset']],
     ];
@@ -88,8 +87,8 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; MSBM <?= date('Y') ?></p>
-
+        <p class="pull-left">&copy; MSBM <?= date('Y') ?>     &nbsp;
+        <a href=<?= Yii::$app->urlManagerFrontend->createUrl('/TSS/frontend/web/index')?> > Basic </a> </p>
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>

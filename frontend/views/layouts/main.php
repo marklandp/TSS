@@ -55,8 +55,8 @@ AppAsset::register($this);
                 ]
         ],
         ['label'=>'Assets/Inventory','url'=>'#','items'=>[ 
-                ['label'=>'Consumables', 'url'=>'#'],
-                ['label'=>'Is Inventory', 'url'=>['/tbl-inventory/index']], 
+                ['label'=>'Consumables', 'url'=>['/tbl-inventory-consumables/index']],
+                ['label'=>'Is Inventory', 'url'=>['/tbl-is-inventory/index']], 
                 ]],
        
         ['label'=>'Change Password','url'=>['#']],
@@ -94,7 +94,6 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; MSBM <?= date('Y') ?></p>
-
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>

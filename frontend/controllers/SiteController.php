@@ -12,6 +12,15 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\TblClassroomSetup;
+use common\models\SearchTblClassroomSetup;
+use common\models\TblAssetLoan;
+use common\models\SearchTblAssetLoan;
+
+
+
+use yii\data\SqlDataProvider;
+use yii\data\ActiveDataProvider;
 
 /**
  * Site controller
@@ -72,7 +81,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new SearchTblClassroomSetup();
+        $searchModel1 = new SearchTblAssetLoan();
+        $dataProvider = $searchModel->search(['SearchTblClassroomSetup'=>['status'=>'open']]);
+        $dataProvider1 = $searchModel1->search(['SearchTblAssetLoan'=>['status'=>'open']]);
+
+        $model = new TblClassroomSetup();
+        $model1 = new TblAssetLoan();
+        return $this->render('index', ['searchModel'=>$searchModel, 'dataProvider'=>$dataProvider, 'model'=>$model
+            ,'searchModel1'=>$searchModel1, 'dataProvider1'=>$dataProvider1,'model1'=>$model1]);
     }
 
     /**
@@ -221,6 +238,14 @@ class SiteController extends Controller
         return $this->render('form');
     }
 
+    /**
+     *
+     *Class item View Page
+     *
+     */
+    public function actionClassItem(){
+        return $this->render('_classitem');
+    }
     /**
      * Asset Test page.
      *

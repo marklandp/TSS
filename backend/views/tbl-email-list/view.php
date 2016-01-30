@@ -6,8 +6,10 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblEmailList */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Email Lists', 'url' => ['index']];
+$this->title = 'Email #'.$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Settings'];
+$this->params['breadcrumbs'][] = ['label' => 'Configurations', 'url' => ['/site/confg']];
+$this->params['breadcrumbs'][] = ['label' => 'Email Lists', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-email-list-view">

@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblClassroom */
 
-$this->title = 'Create Tbl Classroom';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Classrooms', 'url' => ['index']];
+$this->title = 'Create Classroom';
+$this->params['breadcrumbs'][] = ['label' => 'Classrooms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-classroom-create">

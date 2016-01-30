@@ -63,6 +63,18 @@ class TblClassroomSetupController extends Controller
         $model = new TblClassroomSetup();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->user_id=Yii ::$app->user->id;
+            $model->start_date = date ('Y-m-d h:m:s');
+            $model->end_date = date ('Y-m-d h:m:s');
+            $model->update_date = date('Y-m-d h:m:s');
+            $model->setup_time= date('Y-m-d h:m:s');
+            $model->pickuptime =date ('Y-m-d h:m:s');
+            $model->schedule_start_time = date ('Y-m-d h:m:s');
+            $model->schedule_end_time = date ('Y-m-d h:m:s');
+            $model->status = 3;
+
+            $model->save();
+            
             return $this->redirect(['view', 'id' => $model->form_id]);
         } else {
             return $this->render('create', [

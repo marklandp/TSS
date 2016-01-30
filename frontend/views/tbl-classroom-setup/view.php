@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\TblClassroomSetup */
 
-$this->title = $model->form_id;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Classroom Setups', 'url' => ['index']];
+$this->title = 'Classroom Setup #'.$model->form_id;
+$this->params['breadcrumbs'][] = ['label' => 'Classroom Setups', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-classroom-setup-view">
@@ -34,9 +34,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'setup_type',
             'setup_other',
             'closed_by',
-            'start_date',
-            'end_date',
-            'update_date',
+            'start_date:date',
+            'end_date:date',
+            'update_date:date',
             'assigned_to',
             'inventory',
             'comments',
@@ -45,8 +45,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'course_code',
             'setup_time',
             'pickup_time',
-            'scheduled_start_time',
-            'scheduled_end_time',
+            'scheduled_start_time:time',
+            'scheduled_end_time:time',
             'status',
         ],
     ]) ?>
